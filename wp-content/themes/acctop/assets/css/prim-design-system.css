@@ -1,0 +1,253 @@
+/* 
+   PRIM & Associates - Professional Design System
+   Refined Typography, Sophisticated Palette & Glassmorphism
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Oswald:wght@400;600;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --prim-bg-charcoal: #1A1A1A;
+    --prim-accent-gold: #C5A059;
+    --prim-accent-gold-rgb: 197, 160, 89;
+    --prim-navy: #1B263B;
+    --prim-platinum: #E5E4E2;
+    --prim-white: #FFFFFF;
+    --prim-glass-bg: rgba(255, 255, 255, 0.05);
+    --prim-glass-border: rgba(255, 255, 255, 0.1);
+
+    /* Typography */
+    --prim-font-body: 'Inter', sans-serif;
+    --prim-font-heading: 'Playfair Display', serif;
+    --prim-font-condensed: 'Oswald', sans-serif;
+
+    /* Effects */
+    --prim-shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --prim-shadow-md: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --prim-border-radius: 12px;
+    --prim-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prim-accent {
+    color: var(--prim-accent-gold) !important;
+}
+
+/* Animations */
+@keyframes primFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes primScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes primSlowZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.12);
+    }
+}
+
+/* Global Overrides */
+body {
+    font-family: var(--prim-font-body) !important;
+    color: #444;
+}
+
+h1,
+h2,
+h3,
+h4,
+.heading-title {
+    font-family: var(--prim-font-heading) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+/* Glassmorphism Classes */
+.prim-glass-card {
+    background: var(--prim-glass-bg) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--prim-glass-border) !important;
+    box-shadow: var(--prim-shadow-sm);
+}
+
+.prim-glass-nav {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Component Enhancements */
+.guten-icon-box-wrapper:hover {
+    transform: translateY(-8px);
+    transition: var(--prim-transition);
+}
+
+.guten-button {
+    border-radius: 50px !important;
+    font-family: var(--prim-font-body) !important;
+    font-weight: 500 !important;
+    transition: var(--prim-transition) !important;
+}
+
+.guten-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(var(--prim-accent-gold-rgb), 0.3);
+}
+
+/* Section specific styling */
+.guten-section.guten-WujYsu {
+    /* About Section */
+    background-color: #fcfbf7 !important;
+}
+
+.guten-column.guten-nI3VFK .guten-text-highlight {
+    color: var(--prim-accent-gold) !important;
+}
+
+/* ===== Hero Section – CA Professional ===== */
+.section-wrapper[data-id="U9CNeU"] .guten-section {
+    background-color: #fafaf8 !important;
+}
+
+.prim-hero-card {
+    background: var(--prim-white) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    box-shadow: var(--prim-shadow-md) !important;
+    padding: 2.5rem 2.75rem !important;
+}
+
+.prim-hero-eyebrow {
+    font-family: var(--prim-font-condensed) !important;
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    color: #111 !important;
+    margin: 0 0 1rem 0 !important;
+    /* Animation */
+    opacity: 0;
+    animation: primFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+}
+
+.prim-hero-title {
+    font-size: clamp(2.25rem, 5vw, 3rem) !important;
+    line-height: 1.15 !important;
+    color: var(--prim-navy) !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+    /* Animation */
+    opacity: 0;
+    animation: primFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.prim-hero-title .prim-hero-underline {
+    color: var(--prim-navy) !important;
+    border-bottom: 4px solid var(--prim-accent-gold);
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+.prim-hero-desc .text-content-inner p {
+    font-size: 1.0625rem !important;
+    line-height: 1.7 !important;
+    color: #666 !important;
+    margin: 1.5rem 0 2rem 0 !important;
+    max-width: 34em;
+    /* Animation */
+    opacity: 0;
+    animation: primFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+}
+
+.prim-hero-buttons .guten-inner-wrap {
+    gap: 1rem !important;
+    /* Animation */
+    opacity: 0;
+    animation: primFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+}
+
+.prim-cta-primary {
+    background: var(--prim-navy) !important;
+    color: var(--prim-white) !important;
+    border: none !important;
+    padding: 0.875rem 1.75rem !important;
+    font-weight: 600 !important;
+    box-shadow: 0 8px 20px rgba(27, 38, 59, 0.12) !important;
+}
+
+.prim-cta-primary:hover {
+    background: #252d42 !important;
+    box-shadow: 0 12px 25px rgba(27, 38, 59, 0.25) !important;
+}
+
+.prim-cta-secondary {
+    background: transparent !important;
+    color: var(--prim-navy) !important;
+    border: 2px solid var(--prim-navy) !important;
+    padding: 0.6rem 1.35rem !important;
+}
+
+.prim-cta-secondary:hover {
+    background: rgba(27, 38, 59, 0.06) !important;
+    border-color: var(--prim-navy) !important;
+}
+
+/* ===== Hero right column – clean image only ===== */
+.section-wrapper[data-id="U9CNeU"] .guten-column.guten-D07MFE.prim-hero-right,
+.section-wrapper[data-id="U9CNeU"] .prim-hero-right .guten-column-wrapper {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+.prim-hero-right {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+.prim-hero-right .guten-background-overlay,
+.prim-hero-right .guten-element.guten-wrap-helper {
+    display: none !important;
+}
+
+.prim-hero-visual {
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--prim-border-radius);
+    overflow: hidden;
+    box-shadow: var(--prim-shadow-md);
+    background: var(--prim-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    /* Animation */
+    opacity: 0;
+    animation: primScaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+}
+
+.prim-hero-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    /* Zooming Animation */
+    animation: primSlowZoom 20s ease-in-out infinite alternate;
+}
