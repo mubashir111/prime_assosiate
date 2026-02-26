@@ -73,16 +73,6 @@ body {
     color: #444;
 }
 
-h1,
-h2,
-h3,
-h4,
-.heading-title {
-    font-family: var(--prim-font-heading) !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.02em;
-}
-
 /* Glassmorphism Classes */
 .prim-glass-card {
     background: var(--prim-glass-bg) !important;
@@ -104,15 +94,15 @@ h4,
 }
 
 .guten-button {
-    border-radius: 50px !important;
+    border-radius: 6px !important;
     font-family: var(--prim-font-body) !important;
     font-weight: 500 !important;
     transition: var(--prim-transition) !important;
 }
 
 .guten-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(var(--prim-accent-gold-rgb), 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Section specific styling */
@@ -123,131 +113,4 @@ h4,
 
 .guten-column.guten-nI3VFK .guten-text-highlight {
     color: var(--prim-accent-gold) !important;
-}
-
-/* ===== Hero Section – CA Professional ===== */
-.section-wrapper[data-id="U9CNeU"] .guten-section {
-    background-color: #fafaf8 !important;
-}
-
-.prim-hero-card {
-    background: var(--prim-white) !important;
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
-    box-shadow: var(--prim-shadow-md) !important;
-    padding: 2.5rem 2.75rem !important;
-}
-
-.prim-hero-eyebrow {
-    font-family: var(--prim-font-condensed) !important;
-    font-size: 0.875rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 2px !important;
-    text-transform: uppercase !important;
-    color: #111 !important;
-    margin: 0 0 1rem 0 !important;
-    /* Animation */
-    opacity: 0;
-    animation: primFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
-}
-
-.prim-hero-title {
-    font-size: clamp(2.25rem, 5vw, 3rem) !important;
-    line-height: 1.15 !important;
-    color: var(--prim-navy) !important;
-    margin: 0 !important;
-    font-weight: 600 !important;
-    /* Animation */
-    opacity: 0;
-    animation: primFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
-}
-
-.prim-hero-title .prim-hero-underline {
-    color: var(--prim-navy) !important;
-    border-bottom: 4px solid var(--prim-accent-gold);
-    padding-bottom: 4px;
-    display: inline-block;
-}
-
-.prim-hero-desc .text-content-inner p {
-    font-size: 1.0625rem !important;
-    line-height: 1.7 !important;
-    color: #666 !important;
-    margin: 1.5rem 0 2rem 0 !important;
-    max-width: 34em;
-    /* Animation */
-    opacity: 0;
-    animation: primFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
-}
-
-.prim-hero-buttons .guten-inner-wrap {
-    gap: 1rem !important;
-    /* Animation */
-    opacity: 0;
-    animation: primFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
-}
-
-.prim-cta-primary {
-    background: var(--prim-navy) !important;
-    color: var(--prim-white) !important;
-    border: none !important;
-    padding: 0.875rem 1.75rem !important;
-    font-weight: 600 !important;
-    box-shadow: 0 8px 20px rgba(27, 38, 59, 0.12) !important;
-}
-
-.prim-cta-primary:hover {
-    background: #252d42 !important;
-    box-shadow: 0 12px 25px rgba(27, 38, 59, 0.25) !important;
-}
-
-.prim-cta-secondary {
-    background: transparent !important;
-    color: var(--prim-navy) !important;
-    border: 2px solid var(--prim-navy) !important;
-    padding: 0.6rem 1.35rem !important;
-}
-
-.prim-cta-secondary:hover {
-    background: rgba(27, 38, 59, 0.06) !important;
-    border-color: var(--prim-navy) !important;
-}
-
-/* ===== Hero right column – clean image only ===== */
-.section-wrapper[data-id="U9CNeU"] .guten-column.guten-D07MFE.prim-hero-right,
-.section-wrapper[data-id="U9CNeU"] .prim-hero-right .guten-column-wrapper {
-    background: transparent !important;
-    background-image: none !important;
-}
-
-.prim-hero-right {
-    background: transparent !important;
-    background-image: none !important;
-}
-
-.prim-hero-right .guten-background-overlay,
-.prim-hero-right .guten-element.guten-wrap-helper {
-    display: none !important;
-}
-
-.prim-hero-visual {
-    width: 100%;
-    max-width: 100%;
-    border-radius: var(--prim-border-radius);
-    overflow: hidden;
-    box-shadow: var(--prim-shadow-md);
-    background: var(--prim-white);
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    /* Animation */
-    opacity: 0;
-    animation: primScaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
-}
-
-.prim-hero-visual img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    object-position: center top;
-    /* Zooming Animation */
-    animation: primSlowZoom 20s ease-in-out infinite alternate;
 }

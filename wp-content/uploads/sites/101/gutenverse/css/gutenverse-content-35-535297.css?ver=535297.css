@@ -440,10 +440,9 @@ section.guten-element.guten-2VyYGc>.guten-container>.guten-column>.guten-column-
 }
 
 .guten-U9CNeU>.guten-background-overlay {
-    background: ;
     background-image: url(../../2025/05/acctop-trend-overlay.png);
     background-position-x: 90%;
-    background-position-y: 1600%;
+    background-position-y: 16%;
     background-repeat: no-repeat;
     background-size: 1100px;
     background-attachment: scroll;
@@ -461,6 +460,9 @@ section.guten-element.guten-2VyYGc>.guten-container>.guten-column>.guten-column-
     padding-bottom: 0px;
     padding-left: 0px;
     z-index: 3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -3239,7 +3241,7 @@ h6.guten-element.guten-cNcgC3 {
 }
 
 .guten-WiP5Ez {
-    width: 58%;
+    width: 50%;
     order: 1;
 }
 
@@ -3288,7 +3290,7 @@ h6.guten-element.guten-cNcgC3 {
 }
 
 .guten-D07MFE {
-    width: 42%;
+    width: 50%;
     order: 1;
 }
 
