@@ -1314,12 +1314,26 @@
 			font-weight: 600 !important;
 		}
 
-		/* Learn More button - Light Grey */
+		/* Learn More button - Light Outline */
 		.guten-U9CNeU .guten-9Ma3AF .guten-button {
-			background-color: #f1f1f1 !important;
-			color: #2d3e50 !important;
-			border: none !important;
+			background-color: transparent !important;
+			color: #135989 !important;
+			border: 1px solid rgba(19, 89, 137, 0.4) !important;
 			font-weight: 500 !important;
+			padding: 11px 27px !important;
+			transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+		}
+
+		.guten-U9CNeU .guten-9Ma3AF .guten-button:hover {
+			background-color: rgba(19, 89, 137, 0.04) !important;
+			border-color: #135989 !important;
+			color: #135989 !important;
+			transform: translateY(-2px) !important;
+		}
+
+		.guten-U9CNeU .guten-9Ma3AF .guten-button:hover span,
+		.guten-U9CNeU .guten-9Ma3AF .guten-button:hover i {
+			color: #135989 !important;
 		}
 
 		/* Hero Arch Background - Hidden for clean look */
@@ -1388,20 +1402,22 @@
 		}
 
 
-		/* Navbar Ultra Clean Corporate */
+
+		/* Navbar Redesign - Pro Upgrade */
 		.prim-glass-nav {
 			background: rgba(255, 255, 255, 0.92) !important;
-			backdrop-filter: blur(16px) !important;
-			-webkit-backdrop-filter: blur(16px) !important;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02) !important;
+			backdrop-filter: blur(12px) !important;
+			-webkit-backdrop-filter: blur(12px) !important;
+			border-bottom: 1px solid rgba(45, 62, 80, 0.04) !important;
+			box-shadow: 0 8px 32px 0 rgba(19, 89, 137, 0.04) !important;
 			transition: all 0.3s ease !important;
 		}
 
 		.prim-glass-nav .gutenverse-menu>li>a {
-			color: #4a5568 !important;
+			color: #2d3e50 !important;
 			font-weight: 500 !important;
-			transition: color 0.15s ease-in-out !important;
+			position: relative;
+			transition: color 0.3s ease !important;
 		}
 
 		.prim-glass-nav .gutenverse-menu>li>a:hover,
@@ -1409,31 +1425,45 @@
 			color: #135989 !important;
 		}
 
+		.prim-glass-nav .gutenverse-menu>li>a::after {
+			content: '';
+			position: absolute;
+			width: 0%;
+			height: 2px;
+			bottom: -4px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #135989;
+			transition: width 0.3s ease;
+			border-radius: 2px;
+			opacity: 0.8;
+		}
+
+		.prim-glass-nav .gutenverse-menu>li>a:hover::after {
+			width: 80%;
+		}
+
 		.prim-glass-nav .guten-b01p9O .guten-button {
 			background-color: #135989 !important;
 			color: #ffffff !important;
-			border-radius: 4px !important;
-			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
-			font-weight: 500 !important;
-			letter-spacing: 0.025em !important;
-			transition: all 0.2s ease-in-out !important;
+			border-radius: 8px !important;
+			box-shadow: 0 4px 12px rgba(19, 89, 137, 0.3) !important;
+			font-weight: 600 !important;
+			transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 			border: 1px solid transparent !important;
 		}
 
 		.prim-glass-nav .guten-b01p9O .guten-button:hover {
-			transform: translateY(-1px) !important;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-			background-color: #0e4468 !important;
-		}
-
-		.prim-glass-nav .guten-b01p9O .guten-button span,
-		.prim-glass-nav .guten-b01p9O .guten-button i {
-			color: #ffffff !important;
+			transform: translateY(-2px) !important;
+			box-shadow: 0 6px 16px rgba(45, 62, 80, 0.1) !important;
+			background-color: #ffffff !important;
+			color: #135989 !important;
+			border-color: rgba(19, 89, 137, 0.1) !important;
 		}
 
 		.prim-glass-nav .guten-b01p9O .guten-button:hover span,
 		.prim-glass-nav .guten-b01p9O .guten-button:hover i {
-			color: #ffffff !important;
+			color: #135989 !important;
 		}
 	</style>
 	<style id="custom-navbar-padding">
@@ -3990,7 +4020,7 @@
 
 
 
-															<form style="display:none"
+															<form
 																class="guten-element guten-form-builder guten-ni5UOF"
 																data-form-id="75">
 																<div

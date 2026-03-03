@@ -77,6 +77,70 @@ body {
     font-family: var(--prim-font-body) !important;
     background-color: var(--prim-bg-cream) !important;
     color: var(--prim-dark-slate) !important;
+    overflow-x: hidden !important;
+    /* Global overflow prevention */
+}
+
+/* Global Responsive Images */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Hero Section Mobile Overflow Fixes */
+@media (max-width: 768px) {
+
+    /* Reset negative margins that cause horizontal scroll */
+    .guten-YD8M4R,
+    .guten-BVSaI0,
+    .guten-QYTCh9,
+    .guten-element.guten-YD8M4R,
+    .guten-element.guten-BVSaI0,
+    .guten-element.guten-QYTCh9 {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    /* Prevent container overflow */
+    .guten-container {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Force hero buttons into one row with more space */
+    .guten-s0sRgO.flex,
+    .guten-element.guten-s0sRgO {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        /* Allow wrapping if absolutely necessary on tiny screens */
+        gap: 16px !important;
+        /* Increased gap */
+        justify-content: flex-start !important;
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    .guten-element.guten-N0hslg {
+        margin-right: 16px !important;
+        /* Explicit right margin for the first button */
+    }
+
+    .guten-element.guten-N0hslg,
+    .guten-element.guten-9Ma3AF {
+        width: auto !important;
+        padding-right: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        flex: 0 1 auto !important;
+    }
+
+    .guten-N0hslg.guten-button-wrapper .guten-button,
+    .guten-9Ma3AF.guten-button-wrapper .guten-button {
+        padding: 12px 20px !important;
+        /* Slightly more compact for mobile row */
+        white-space: nowrap !important;
+    }
 }
 
 h1,
@@ -91,7 +155,115 @@ h6 {
     letter-spacing: -0.01em !important;
 }
 
+/* Force Global Section Backgrounds & Eliminate Blue Vignettes */
+.wp-block-gutenverse-section:not(.prim-glass-nav)>.guten-background-overlay,
+.guten-section:not(.prim-glass-nav)>.guten-background-overlay,
+body section:not(.prim-glass-nav),
+.guten-background-overlay {
+    background-image: none !important;
+    background-color: transparent !important;
+}
 
+/* Ensure section containers have the correct background */
+.wp-block-gutenverse-section,
+.guten-section,
+body section {
+    background-color: var(--prim-bg-cream) !important;
+}
+
+/* Force paragraph legibility on all cream sections */
+.wp-block-gutenverse-section:not(.guten-s1sLnH) p,
+.guten-section:not(.guten-s1sLnH) p,
+.wp-block-gutenverse-section:not(.guten-s1sLnH) .icon-box-description {
+    color: var(--prim-text-muted) !important;
+}
+
+.wp-block-gutenverse-section:not(.guten-s1sLnH) .fun-fact-inner .number,
+.wp-block-gutenverse-section:not(.guten-s1sLnH) .fun-fact-inner .super {
+    color: var(--prim-dark-slate) !important;
+}
+
+/* Premium Form Design on Cream Backgrounds */
+.wp-block-gutenverse-section:not(.guten-s1sLnH) .guten-form-builder,
+.guten-section:not(.guten-s1sLnH) .guten-form-builder {
+    background-color: var(--prim-white) !important;
+    padding: 32px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 40px rgba(19, 89, 137, 0.06) !important;
+}
+
+.wp-block-gutenverse-section:not(.guten-s1sLnH) .guten-form-input,
+.guten-section:not(.guten-s1sLnH) .guten-form-input {
+    margin-bottom: 20px !important;
+}
+
+.wp-block-gutenverse-section:not(.guten-s1sLnH) .input-label,
+.guten-section:not(.guten-s1sLnH) .input-label {
+    color: var(--prim-dark-slate) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+.wp-block-gutenverse-section:not(.guten-s1sLnH) .gutenverse-input,
+.guten-section:not(.guten-s1sLnH) .gutenverse-input {
+    background-color: #f4f7f9 !important;
+    color: var(--prim-dark-slate) !important;
+    border: 1px solid rgba(45, 62, 80, 0.1) !important;
+    border-radius: 6px !important;
+    padding: 12px 16px !important;
+    font-size: 15px !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    width: 100% !important;
+}
+
+.wp-block-gutenverse-section:not(.guten-s1sLnH) .gutenverse-input:focus,
+.guten-section:not(.guten-s1sLnH) .gutenverse-input:focus {
+    border-color: #135989 !important;
+    box-shadow: 0 0 0 4px rgba(19, 89, 137, 0.15) !important;
+    outline: none !important;
+    transform: translateY(-2px) !important;
+}
+
+.wp-block-gutenverse-section:not(.guten-s1sLnH) .gutenverse-input::placeholder,
+.guten-section:not(.guten-s1sLnH) .gutenverse-input::placeholder {
+    color: var(--prim-text-muted) !important;
+    opacity: 0.6 !important;
+}
+
+/* Form Responsive Overrides */
+@media (max-width: 768px) {
+
+    /* Compress form padding on mobile */
+    .wp-block-gutenverse-section:not(.guten-s1sLnH) .guten-form-builder,
+    .guten-section:not(.guten-s1sLnH) .guten-form-builder {
+        padding: 24px 16px !important;
+        border-radius: 8px !important;
+    }
+
+    /* Force mobile inputs to stack 100% width and reduce margin */
+    .wp-block-gutenverse-section:not(.guten-s1sLnH) .guten-form-input,
+    .guten-section:not(.guten-s1sLnH) .guten-form-input {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 20px !important;
+        float: none !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Slightly smaller target for input fields */
+    .wp-block-gutenverse-section:not(.guten-s1sLnH) .gutenverse-input,
+    .guten-section:not(.guten-s1sLnH) .gutenverse-input {
+        padding: 10px 14px !important;
+        font-size: 14px !important;
+    }
+}
 
 /* Specialized Section: Clients / Testimonials */
 /* Usually has a dark ID/class in gutenverse. We force it to beige. */
@@ -182,7 +354,7 @@ h6 {
 
 .guten-button:hover i,
 .guten-button:hover span {
-    color: var(--prim-white) !important;
+    color: inherit !important;
 }
 
 /* Footer & Global Visibility Fixes */

@@ -6,17 +6,19 @@ function replaceInFiles(dir) {
     for (const file of files) {
         const fullPath = path.join(dir, file);
         if (fs.statSync(fullPath).isDirectory()) {
-            replaceInFiles(fullPath);
-        } else if (fullPath.endsWith('.html') || fullPath.endsWith('.css')) {
+            if (!fullPath.includes('node_modules') && !fullPath.includes('.git')) {
+                replaceInFiles(fullPath);
+            }
+        } else if (fullPath.endsWith('.html')) {
             let content = fs.readFileSync(fullPath, 'utf8');
             let originalContent = content;
 
-            // Case insensitive replace
-            content = content.replace(/#04151f/gi, '#135989');
+            // Exact string replacement
+            content = content.replace(/background: rgba\(248, 246, 242, 0\.95\) !important;/g, 'background: rgba(255, 255, 255, 0.92) !important;');
 
             if (content !== originalContent) {
                 fs.writeFileSync(fullPath, content);
-                console.log('Replaced in ' + fullPath);
+                console.log('Replaced background in ' + fullPath);
             }
         }
     }
