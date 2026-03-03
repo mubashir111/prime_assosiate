@@ -108,19 +108,23 @@ img {
         overflow-x: hidden !important;
     }
 
-    /* Force hero buttons into one row with refined spacing */
+    /* Force hero buttons into one row with refined spacing and sizing */
     .guten-s0sRgO.flex,
     .guten-element.guten-s0sRgO {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         /* Prevent wrapping */
-        gap: 20px !important;
-        /* Increased gap for better tap targets */
+        gap: 16px !important;
+        /* Gap as primary spacing */
         justify-content: flex-start !important;
         width: 100% !important;
         margin-top: 24px !important;
-        /* Standardized spacing from text above */
+    }
+
+    .guten-element.guten-N0hslg {
+        margin-right: 16px !important;
+        /* Fallback/explicit spacing for first button */
     }
 
     .guten-element.guten-N0hslg,
@@ -128,16 +132,21 @@ img {
         width: auto !important;
         flex: 0 1 auto !important;
         padding: 0 !important;
-        /* Reset all restrictive padding found in audit */
-        margin: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
     }
 
     .guten-N0hslg.guten-button-wrapper .guten-button,
     .guten-9Ma3AF.guten-button-wrapper .guten-button {
-        padding: 14px 24px !important;
-        /* Slightly more premium sizing */
+        padding: 12px 24px !important;
+        height: 46px !important;
+        /* Uniform height to ensure same size */
         white-space: nowrap !important;
         display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+        font-size: 15px !important;
     }
 
     /* Premium Mobile Menu (Gutenverse) Fixes */
