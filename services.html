@@ -284,6 +284,8 @@
 		media='all' />
 	<link rel='stylesheet' id='custom-styling-css'
 		href='wp-content/themes/acctop/assets/css/custom-styling.css%3Fver=1.0.0.css' media='all' />
+	<link rel='stylesheet' id='prim-design-system-css' href='wp-content/themes/acctop/assets/css/prim-design-system.css'
+		media='all' />
 	<style id='global-styles-inline-css'>
 		:root {
 			--wp--preset--aspect-ratio--square: 1;
@@ -306,15 +308,15 @@
 			--wp--preset--color--vivid-cyan-blue: #0693e3;
 			--wp--preset--color--vivid-purple: #9b51e0;
 			--wp--preset--color--primary: #fafafa;
-			--wp--preset--color--secondary: #eca251;
-			--wp--preset--color--heading: #04151f;
-			--wp--preset--color--text: #04151f8f;
+			--wp--preset--color--secondary: #135989;
+			--wp--preset--color--heading: #135989;
+			--wp--preset--color--text: #1359898f;
 			--wp--preset--color--accent-link: #4daa57;
 			--wp--preset--color--accent-button: #4daa5729;
-			--wp--preset--color--background: #eca25129;
-			--wp--preset--color--light-background: #eca25114;
-			--wp--preset--color--border: #04151f52;
-			--wp--preset--color--link: #04151f29;
+			--wp--preset--color--background: #13598929;
+			--wp--preset--color--light-background: #13598914;
+			--wp--preset--color--border: #13598952;
+			--wp--preset--color--link: #13598929;
 			--wp--preset--color--dark-heading: #fafafa;
 			--wp--preset--color--dark-text: #fafafa8f;
 			--wp--preset--color--dark-light-background: #fafafa0a;
@@ -1269,8 +1271,6 @@
 		href='wp-content/plugins/gutenverse/lib/framework/assets/dist/frontend-icon.css%3Fver=2.3.1.css' media='all' />
 	<link rel="https://api.w.org/" href="wp-json/index.html" />
 	<link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/43" />
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="index.htmlxmlrpc.php?rsd" />
-
 	<link rel="canonical" href="services.html" />
 	<link rel='shortlink' href='services.html' />
 	<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
@@ -1282,6 +1282,161 @@
 	<link rel="apple-touch-icon" href="wp-content/uploads/sites/101/2025/05/cropped-favicon-180x180.png" />
 	<meta name="msapplication-TileImage"
 		content="index.htmlwp-content/uploads/sites/101/2025/05/cropped-favicon-270x270.png" />
+
+	<style id="custom-hero-gradient">
+		/* Hero section gradient override */
+		.guten-U9CNeU:not(.background-animated),
+		.guten-U9CNeU.background-animated>.guten-background-animated .animated-layer,
+		.guten-element.guten-U9CNeU {
+			background: linear-gradient(135deg, #135989 0%, #0a3d66 100%) !important;
+		}
+
+		/* Hero Heading text color */
+		.guten-U9CNeU .guten-jYTq4b,
+		.guten-U9CNeU .guten-jYTq4b span,
+		.guten-U9CNeU .guten-Fxldoi {
+			color: #ffffff !important;
+		}
+
+		/* Hero Description text color */
+		.guten-U9CNeU .guten-PKvPUR p {
+			color: rgba(255, 255, 255, 0.9) !important;
+		}
+
+		/* Get Started button */
+		.guten-U9CNeU .guten-N0hslg .guten-button {
+			background-color: #5bb259 !important;
+			color: #ffffff !important;
+			border: none !important;
+		}
+
+		/* Learn More button */
+		.guten-U9CNeU .guten-9Ma3AF .guten-button {
+			background-color: #ffffff !important;
+			color: #135989 !important;
+			border: none !important;
+		}
+
+		/* Hero Arch Background */
+		.guten-D07MFE>.guten-column-wrapper>.guten-background-overlay,
+		.guten-D07MFE.background-animated>.guten-column-wrapper>.guten-background-overlay,
+		.guten-D07MFE.background-animated>.sticky-wrapper>.guten-column-wrapper>.guten-background-overlay {
+			background: linear-gradient(135deg, #135989 0%, #0a3d66 100%) !important;
+		}
+
+		.guten-D07MFE:not(.background-animated)>.guten-column-wrapper,
+		.guten-D07MFE>.sticky-wrapper>.guten-column-wrapper {
+			background-color: #135989 !important;
+		}
+
+		/* Global icon gradients */
+		.icon.bg-style-gradient,
+		.icon-style-gradient {
+			background: linear-gradient(135deg, #135989 0%, #0a3d66 100%) !important;
+			-webkit-background-clip: text !important;
+			background-clip: text !important;
+			-webkit-text-fill-color: transparent !important;
+		}
+
+		.icon.bg-style-gradient i,
+		.icon.bg-style-gradient {
+			-webkit-text-fill-color: initial !important;
+		}
+
+		/* Service Boxes Background Override */
+		.guten-6pYJEa>.guten-background-overlay,
+		.guten-aXfuVV>.guten-background-overlay,
+		.guten-IfQgPd>.guten-background-overlay {
+			background: linear-gradient(45deg, rgba(240, 246, 250, 1) 50%, rgba(240, 246, 250, 0.72) 100%) !important;
+		}
+
+		.guten-6pYJEa:not(.background-animated),
+		.guten-6pYJEa.background-animated>.guten-inner-wrap>.guten-background-animated .animated-layer,
+		.guten-aXfuVV:not(.background-animated),
+		.guten-aXfuVV.background-animated>.guten-inner-wrap>.guten-background-animated .animated-layer,
+		.guten-IfQgPd:not(.background-animated),
+		.guten-IfQgPd.background-animated>.guten-inner-wrap>.guten-background-animated .animated-layer {
+			background-image: none !important;
+			background-color: var(--wp--preset--color--light-background) !important;
+		}
+
+		/* Leading Partners Arch Background */
+		.guten-MRloPy>.guten-background-overlay {
+			background: radial-gradient(at center center, rgba(19, 89, 137, 0.6) 0%, rgba(19, 89, 137, 1) 71.2%) !important;
+		}
+
+		/* "Why Choose Us" Background Override */
+		.guten-hdaRTv>.guten-background-overlay,
+		.guten-c8EYjP>.guten-background-overlay,
+		.guten-ZpcE9Z>.guten-background-overlay {
+			background: transparent !important;
+		}
+
+		.guten-hdaRTv:not(.background-animated),
+		.guten-hdaRTv.background-animated>.guten-background-animated .animated-layer {
+			background-image: none !important;
+		}
+
+		/* Expertise That Matters Numbers Override */
+		.guten-25cYLP.guten-feature-list .icon img {
+			filter: hue-rotate(175deg) brightness(0.8) saturate(1.2) !important;
+		}
+	</style>
+	<style id="custom-navbar-padding">
+		/* Navbar Padding left and right */
+		.guten-2VyYGc>.guten-container {
+			padding-left: 4vw !important;
+			padding-right: 4vw !important;
+		}
+	</style>
+		<style id="custom-prim-glass-nav">
+		/* Navbar Ultra Clean Corporate */
+		.prim-glass-nav {
+			background: rgba(255, 255, 255, 0.92) !important;
+			backdrop-filter: blur(16px) !important;
+			-webkit-backdrop-filter: blur(16px) !important;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02) !important;
+			transition: all 0.3s ease !important;
+		}
+
+		.prim-glass-nav .gutenverse-menu>li>a {
+			color: #4a5568 !important;
+			font-weight: 500 !important;
+			transition: color 0.15s ease-in-out !important;
+		}
+
+		.prim-glass-nav .gutenverse-menu>li>a:hover,
+		.prim-glass-nav .gutenverse-menu>li.current-menu-item>a {
+			color: #135989 !important;
+		}
+
+		.prim-glass-nav .guten-b01p9O .guten-button {
+			background-color: #135989 !important;
+			color: #ffffff !important;
+			border-radius: 4px !important;
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+			font-weight: 500 !important;
+			letter-spacing: 0.025em !important;
+			transition: all 0.2s ease-in-out !important;
+			border: 1px solid transparent !important;
+		}
+
+		.prim-glass-nav .guten-b01p9O .guten-button:hover {
+			transform: translateY(-1px) !important;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+			background-color: #0e4468 !important;
+		}
+			.prim-glass-nav .guten-b01p9O .guten-button span,
+		.prim-glass-nav .guten-b01p9O .guten-button i {
+			color: #ffffff !important;
+		}
+
+		.prim-glass-nav .guten-b01p9O .guten-button:hover span,
+		.prim-glass-nav .guten-b01p9O .guten-button:hover i {
+			color: #ffffff !important;
+		}
+	</style>
 </head>
 
 <body class="page-template page-template-blank-canvas page page-id-43 wp-embed-responsive">
@@ -1290,7 +1445,7 @@
 		<div class="guten-XMKGXO   entry-content is-layout-constrained guten-post-content guten-element">
 			<div class="section-wrapper" data-id="2VyYGc">
 				<section
-					class="wp-block-gutenverse-section guten-element guten-section guten-2VyYGc layout-fullwidth align-stretch">
+					class="wp-block-gutenverse-section guten-element guten-section guten-2VyYGc layout-fullwidth align-stretch prim-glass-nav" style="position: sticky; top: 0; z-index: 9999;">
 					<div class="guten-container guten-column-gap-no">
 						<div class="wp-block-gutenverse-column guten-element guten-column guten-4WRTsx">
 							<div class="guten-column-wrapper" data-id="4WRTsx">
@@ -1336,7 +1491,6 @@
 												</li>
 												<li id="menu-item-70"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
-													<a href="appointment.html">Appointment</a>
 												</li>
 												<li id="menu-item-71"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
@@ -2730,6 +2884,7 @@
 		id="gutenverse-companion-frontend-js"></script>
 	<script src="wp-content/plugins/gutenverse/lib/framework/assets/js/frontend/animation-basic.js%3Fver=2.3.1"
 		id="gutenverse-core-frontend-animation-basic-script-js"></script>
+	<script src="wp-content/themes/acctop/assets/js/prim-animations.js"></script>
 </body>
 
 </html>

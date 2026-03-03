@@ -530,10 +530,10 @@ section.guten-element.guten-2VyYGc>.guten-container>.guten-column>.guten-column-
     max-width: 1232px;
 }
 
-.guten-bMf3z2:not(.background-animated),
+/* .guten-bMf3z2:not(.background-animated),
 .guten-bMf3z2.background-animated>.guten-background-animated .animated-layer {
     background: var(--wp--preset--color--primary);
-}
+} */
 
 .guten-element.guten-bMf3z2 {
     padding-top: 160px;
@@ -716,7 +716,7 @@ section.guten-element.guten-A1hmK0>.guten-container>.guten-column>.guten-column-
 }
 
 .guten-CHggFS>.guten-background-overlay {
-    background: radial-gradient(at center center, rgba(4, 21, 31, 0.88) 0%, rgba(4, 21, 31, 1) 77.1%);
+    background: radial-gradient(at center center, rgba(19, 89, 137, 0.88) 0%, rgba(19, 89, 137, 1) 77.1%);
 }
 
 .guten-CHggFS:not(.background-animated),
@@ -879,7 +879,7 @@ h6.guten-element.guten-sx503p {
 }
 
 .guten-sx503p #guten-UstdN0 {
-    background: linear-gradient(180deg, rgba(236, 162, 80, 0) 90%, rgba(236, 162, 80, 1) 90%);
+    background: linear-gradient(180deg, rgba(19, 89, 137, 0) 90%, rgba(19, 89, 137, 1) 90%);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1729,7 +1729,7 @@ h6.guten-element.guten-mfL3NB {
 }
 
 .guten-mfL3NB #guten-wAYhgp {
-    background: linear-gradient(180deg, rgba(236, 162, 81, 0) 90%, rgba(236, 162, 81, 1) 90%);
+    background: linear-gradient(180deg, rgba(19, 89, 137, 0) 90%, rgba(19, 89, 137, 1) 90%);
 }
 
 @media only screen and (max-width: 767px) {
@@ -2197,7 +2197,7 @@ h6.guten-element.guten-U3J3yB {
 .guten-6lnv8r.background-animated>.sticky-wrapper>.guten-column-wrapper>.guten-background-overlay,
 .guten-6lnv8r.background-animated>.guten-column-wrapper>.guten-background-overlay,
 .guten-6lnv8r>.guten-column-wrapper>.guten-background-overlay {
-    background: radial-gradient(at center center, rgba(236, 162, 81, 0.68) 0%, rgba(236, 162, 81, 1) 92.8%);
+    background: radial-gradient(at center center, rgba(19, 89, 137, 0.68) 0%, rgba(19, 89, 137, 1) 92.8%);
 }
 
 .guten-6lnv8r>.sticky-wrapper>.guten-column-wrapper:before,
@@ -3241,7 +3241,7 @@ h6.guten-element.guten-cNcgC3 {
 }
 
 .guten-WiP5Ez {
-    width: 50%;
+    width: 60%;
     order: 1;
 }
 
@@ -3290,14 +3290,14 @@ h6.guten-element.guten-cNcgC3 {
 }
 
 .guten-D07MFE {
-    width: 50%;
+    width: 40%;
     order: 1;
 }
 
 .guten-D07MFE.background-animated>.sticky-wrapper>.guten-column-wrapper>.guten-background-overlay,
 .guten-D07MFE.background-animated>.guten-column-wrapper>.guten-background-overlay,
 .guten-D07MFE>.guten-column-wrapper>.guten-background-overlay {
-    background: radial-gradient(at center center, rgba(236, 162, 81, 0.67) 0%, rgba(236, 162, 81, 1) 74.6%);
+    background: radial-gradient(at center center, rgba(19, 89, 137, 0.67) 0%, rgba(19, 89, 137, 1) 74.6%);
 }
 
 .guten-D07MFE>.sticky-wrapper>.guten-column-wrapper:before,
@@ -3852,10 +3852,7 @@ h6.guten-element.guten-cNcgC3 {
     border-top-right-radius: 500px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    padding-top: 56px;
-    padding-right: 56px;
-    padding-bottom: 0px;
-    padding-left: 56px;
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -4049,7 +4046,7 @@ h6.guten-element.guten-pCnxvl {
 }
 
 .guten-pCnxvl #guten-UstdN0 {
-    background: linear-gradient(180deg, rgba(236, 162, 80, 0) 90%, rgba(236, 162, 80, 1) 90%);
+    background: linear-gradient(180deg, rgba(19, 89, 137, 0) 90%, rgba(19, 89, 137, 1) 90%);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -4142,7 +4139,7 @@ h6.guten-element.guten-pCnxvl {
 }
 
 .guten-MRloPy>.guten-background-overlay {
-    background: radial-gradient(at center center, rgba(236, 162, 81, 0.48) 0%, rgba(236, 162, 81, 1) 71.2%);
+    background: radial-gradient(at center center, rgba(19, 89, 137, 0.48) 0%, rgba(19, 89, 137, 1) 71.2%);
 }
 
 .guten-MRloPy .guten-inner-wrap {
@@ -4369,7 +4366,7 @@ h6.guten-element.guten-pbvKwI {
 }
 
 .guten-pbvKwI #guten-UstdN0 {
-    background: linear-gradient(180deg, rgba(236, 162, 80, 0) 90%, rgba(236, 162, 80, 1) 90%);
+    background: linear-gradient(180deg, rgba(19, 89, 137, 0) 90%, rgba(19, 89, 137, 1) 90%);
 }
 
 @media only screen and (max-width: 767px) {
@@ -4577,7 +4574,7 @@ h6.guten-element.guten-SMemNd {
 }
 
 .guten-SMemNd #guten-UstdN0 {
-    background: linear-gradient(180deg, rgba(236, 162, 80, 0) 90%, rgba(236, 162, 80, 1) 90%);
+    background: linear-gradient(180deg, rgba(19, 89, 137, 0) 90%, rgba(19, 89, 137, 1) 90%);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -4639,7 +4636,7 @@ h6.guten-element.guten-jYTq4b {
 }
 
 .guten-jYTq4b #guten-K8jqgB {
-    background: linear-gradient(180deg, rgba(236, 162, 81, 0) 90%, rgba(236, 162, 81, 1) 90%);
+    background: linear-gradient(180deg, rgba(19, 89, 137, 0) 90%, rgba(19, 89, 137, 1) 90%);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -6482,7 +6479,7 @@ h6.guten-element.guten-7bjGRb {
 }
 
 .guten-7bjGRb #guten-UstdN0 {
-    background: linear-gradient(180deg, rgba(236, 162, 80, 0) 90%, rgba(236, 162, 80, 1) 90%);
+    background: linear-gradient(180deg, rgba(19, 89, 137, 0) 90%, rgba(19, 89, 137, 1) 90%);
 }
 
 @media only screen and (max-width: 767px) {
@@ -6999,7 +6996,7 @@ h6.guten-element.guten-Fxldoi {
 
 .guten-PzfWnw.guten-element {
     display: flex;
-    width: 178px !important;
+    width: 181px !important;
     overflow: inherit;
 }
 
@@ -7019,14 +7016,11 @@ h6.guten-element.guten-Fxldoi {
     border-bottom-left-radius: 12px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
     animation-delay: 0.3s;
-    margin-top: 0px;
+    margin-top: 100px;
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-    padding-top: 16px;
-    padding-right: 24px;
-    padding-bottom: 24px;
-    padding-left: 24px;
+
 }
 
 .guten-aD6fMQ .guten-icon-box-wrapper {
@@ -7780,11 +7774,11 @@ h6.guten-element.guten-LMHila {
 }
 
 .guten-icon-box.guten-xpCJLO .icon-box.icon-box-header .icon .icon-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 80, 1) 0%, rgba(236, 162, 80, 1) 97.6%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 1) 0%, rgba(19, 89, 137, 1) 97.6%);
 }
 
 .guten-icon-box.guten-xpCJLO .icon-box.icon-box-header .icon.bg-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 80, 0.16) 0%, rgba(236, 162, 80, 0) 100%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 0.16) 0%, rgba(19, 89, 137, 0) 100%);
 }
 
 .guten-icon-box.guten-xpCJLO .icon-box.icon-box-header .icon {
@@ -8650,11 +8644,11 @@ h6.guten-element.guten-Dl6zVL {
 }
 
 .guten-icon-box.guten-ixT5xs .icon-box.icon-box-header .icon .icon-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 81, 1) 0%, rgba(236, 162, 81, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 1) 0%, rgba(19, 89, 137, 1) 100%);
 }
 
 .guten-icon-box.guten-ixT5xs .icon-box.icon-box-header .icon.bg-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 81, 0.16) 0%, rgba(77, 170, 87, 0) 100%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 0.16) 0%, rgba(77, 170, 87, 0) 100%);
 }
 
 .guten-icon-box.guten-ixT5xs .icon-box.icon-box-header .icon {
@@ -8752,11 +8746,11 @@ h6.guten-element.guten-1lFwqp {
 }
 
 .guten-icon-box.guten-bLU0b0 .icon-box.icon-box-header .icon .icon-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 81, 1) 0%, rgba(236, 162, 81, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 1) 0%, rgba(19, 89, 137, 1) 100%);
 }
 
 .guten-icon-box.guten-bLU0b0 .icon-box.icon-box-header .icon.bg-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 81, 0.16) 0%, rgba(77, 170, 87, 0) 100%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 0.16) 0%, rgba(77, 170, 87, 0) 100%);
 }
 
 .guten-icon-box.guten-bLU0b0 .icon-box.icon-box-header .icon {
@@ -8854,11 +8848,11 @@ h6.guten-element.guten-dQAGpI {
 }
 
 .guten-icon-box.guten-e127Ss .icon-box.icon-box-header .icon .icon-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 80, 1) 0%, rgba(236, 162, 80, 1) 97.6%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 1) 0%, rgba(19, 89, 137, 1) 97.6%);
 }
 
 .guten-icon-box.guten-e127Ss .icon-box.icon-box-header .icon.bg-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 80, 0.16) 0%, rgba(236, 162, 80, 0) 100%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 0.16) 0%, rgba(19, 89, 137, 0) 100%);
 }
 
 .guten-icon-box.guten-e127Ss .icon-box.icon-box-header .icon {
@@ -8956,11 +8950,11 @@ h6.guten-element.guten-3ARiiE {
 }
 
 .guten-icon-box.guten-t2rRPY .icon-box.icon-box-header .icon .icon-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 80, 1) 0%, rgba(236, 162, 80, 1) 97.6%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 1) 0%, rgba(19, 89, 137, 1) 97.6%);
 }
 
 .guten-icon-box.guten-t2rRPY .icon-box.icon-box-header .icon.bg-style-gradient {
-    background-image: linear-gradient(180deg, rgba(236, 162, 80, 0.16) 0%, rgba(236, 162, 80, 0) 100%);
+    background-image: linear-gradient(180deg, rgba(19, 89, 137, 0.16) 0%, rgba(19, 89, 137, 0) 100%);
 }
 
 .guten-icon-box.guten-t2rRPY .icon-box.icon-box-header .icon {

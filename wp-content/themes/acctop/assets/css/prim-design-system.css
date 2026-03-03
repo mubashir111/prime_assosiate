@@ -3,23 +3,23 @@
    Refined Typography, Sophisticated Palette & Glassmorphism
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Oswald:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 :root {
-    /* Color Palette */
-    --prim-bg-charcoal: #1A1A1A;
-    --prim-accent-gold: #C5A059;
-    --prim-accent-gold-rgb: 197, 160, 89;
-    --prim-navy: #1B263B;
-    --prim-platinum: #E5E4E2;
+    /* Color Palette - New Light Theme */
+    --prim-bg-cream: #f8f6f2;
+    --prim-accent-gold: #135989;
+    --prim-accent-gold-rgb: 19, 89, 137;
+    --prim-dark-slate: #2d3e50;
+    --prim-text-muted: #6e7175;
+    --prim-badge-bg: #f1ece3;
     --prim-white: #FFFFFF;
-    --prim-glass-bg: rgba(255, 255, 255, 0.05);
-    --prim-glass-border: rgba(255, 255, 255, 0.1);
+    --prim-glass-bg: rgba(255, 255, 255, 0.7);
+    --prim-glass-border: rgba(0, 0, 0, 0.05);
 
     /* Typography */
     --prim-font-body: 'Inter', sans-serif;
-    --prim-font-heading: 'Playfair Display', serif;
-    --prim-font-condensed: 'Oswald', sans-serif;
+    --prim-font-heading: 'DM Sans', sans-serif;
 
     /* Effects */
     --prim-shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -30,6 +30,11 @@
 
 .prim-accent {
     color: var(--prim-accent-gold) !important;
+}
+
+/* Global Animation Fix */
+.animated {
+    animation-duration: 1s !important;
 }
 
 /* Animations */
@@ -70,10 +75,38 @@
 /* Global Overrides */
 body {
     font-family: var(--prim-font-body) !important;
-    color: #444;
+    background-color: var(--prim-bg-cream) !important;
+    color: var(--prim-dark-slate) !important;
 }
 
-/* Glassmorphism Classes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--prim-dark-slate) !important;
+    font-family: var(--prim-font-heading) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.01em !important;
+}
+
+
+
+/* Specialized Section: Clients / Testimonials */
+/* Usually has a dark ID/class in gutenverse. We force it to beige. */
+.guten-CHggFS,
+.guten-CHggFS .guten-background-overlay,
+.guten-CHggFS:not(.background-animated) {
+    background-color: var(--prim-bg-cream) !important;
+    background-image: none !important;
+}
+
+.section-wrapper .wp-block-gutenverse-section>.guten-background-overlay {
+    background-color: transparent !important;
+}
+
+/* Glassmorphism & Specialized Cards */
 .prim-glass-card {
     background: var(--prim-glass-bg) !important;
     backdrop-filter: blur(10px);
@@ -82,35 +115,177 @@ body {
 }
 
 .prim-glass-nav {
-    background: rgba(255, 255, 255, 0.8) !important;
+    background: var(--prim-bg-cream) !important;
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-bottom: none !important;
 }
 
-/* Component Enhancements */
-.guten-icon-box-wrapper:hover {
-    transform: translateY(-8px);
-    transition: var(--prim-transition);
+/* Service Boxes & Informational Cards */
+.guten-6pYJEa,
+.guten-aXfuVV,
+.guten-IfQgPd {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+    border-radius: var(--prim-border-radius) !important;
+    transition: all 0.3s ease !important;
 }
 
+.guten-6pYJEa:hover,
+.guten-aXfuVV:hover,
+.guten-IfQgPd:hover {
+    border: 1px solid var(--prim-accent-gold) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 35px rgba(19, 89, 137, 0.2) !important;
+}
+
+/* Icon Gradients - Uniform Dark Palette */
+.icon.bg-style-gradient,
+.icon-style-gradient {
+    background: linear-gradient(135deg, var(--prim-dark-slate) 0%, #1a2639 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.icon.bg-style-gradient i {
+    -webkit-text-fill-color: initial !important;
+}
+
+/* Service Box & Global Button Components */
 .guten-button {
+    background-color: var(--prim-accent-gold) !important;
+    color: #ffffff !important;
+    padding: 12px 28px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border: none !important;
     border-radius: 6px !important;
-    font-family: var(--prim-font-body) !important;
-    font-weight: 500 !important;
     transition: var(--prim-transition) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+}
+
+.guten-button i,
+.guten-button span {
+    color: inherit !important;
 }
 
 .guten-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--prim-dark-slate) !important;
+    color: var(--prim-white) !important;
+    transform: translateY(-2px) scale(1.02) !important;
 }
 
-/* Section specific styling */
-.guten-section.guten-WujYsu {
-    /* About Section */
-    background-color: #fcfbf7 !important;
+.guten-button:hover i,
+.guten-button:hover span {
+    color: var(--prim-white) !important;
 }
 
-.guten-column.guten-nI3VFK .guten-text-highlight {
+/* Footer & Global Visibility Fixes */
+.guten-s1sLnH,
+.section-wrapper[data-id="s1sLnH"] {
+    background-color: var(--prim-dark-slate) !important;
+    color: var(--prim-white) !important;
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+}
+
+.guten-s1sLnH .guten-background-overlay {
+    background-color: var(--prim-dark-slate) !important;
+}
+
+.guten-s1sLnH h1,
+.guten-s1sLnH h2,
+.guten-s1sLnH h3,
+.guten-s1sLnH h4,
+.guten-s1sLnH h5,
+.guten-s1sLnH h6 {
     color: var(--prim-accent-gold) !important;
+}
+
+.guten-s1sLnH p,
+.guten-s1sLnH span,
+.guten-s1sLnH .list-text,
+.guten-s1sLnH .text-content-inner p {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.guten-s1sLnH a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    transition: var(--prim-transition) !important;
+}
+
+.guten-s1sLnH a:hover {
+    color: var(--prim-accent-gold) !important;
+}
+
+.guten-s1sLnH .guten-social-icon a {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--prim-white) !important;
+}
+
+.guten-s1sLnH .guten-social-icon a:hover {
+    background: var(--prim-accent-gold) !important;
+    color: var(--prim-dark-slate) !important;
+}
+
+.icon-style-color {
+    color: var(--prim-dark-slate) !important;
+}
+
+/* Custom Highlight Consistency */
+.guten-text-highlight {
+    background-image: linear-gradient(to right, var(--prim-accent-gold) 0%, var(--prim-accent-gold) 100%) !important;
+    background-size: 100% 8px !important;
+    background-repeat: no-repeat !important;
+    background-position: 0 95% !important;
+    text-decoration: none !important;
+}
+
+/* Scroll Animations */
+.prim-fade-elem {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.prim-fade-elem.prim-in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Badge Highlight Shine Animation */
+@keyframes prim-shine-effect {
+    0% {
+        transform: translateX(-150%) skewX(-25deg);
+    }
+
+    15%,
+    100% {
+        transform: translateX(200%) skewX(-25deg);
+    }
+}
+
+.prim-animate-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.prim-animate-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-150%) skewX(-25deg);
+    animation: prim-shine-effect 4s infinite linear;
+    pointer-events: none;
+    z-index: 10;
 }

@@ -308,15 +308,15 @@
 			--wp--preset--color--vivid-cyan-blue: #0693e3;
 			--wp--preset--color--vivid-purple: #9b51e0;
 			--wp--preset--color--primary: #fafafa;
-			--wp--preset--color--secondary: #eca251;
-			--wp--preset--color--heading: #04151f;
-			--wp--preset--color--text: #04151f8f;
+			--wp--preset--color--secondary: #2d3e50;
+			--wp--preset--color--heading: #135989;
+			--wp--preset--color--text: #1359898f;
 			--wp--preset--color--accent-link: #4daa57;
 			--wp--preset--color--accent-button: #4daa5729;
-			--wp--preset--color--background: #eca25129;
-			--wp--preset--color--light-background: #eca25114;
-			--wp--preset--color--border: #04151f52;
-			--wp--preset--color--link: #04151f29;
+			--wp--preset--color--background: #2d3e5029;
+			--wp--preset--color--light-background: #2d3e5014;
+			--wp--preset--color--border: #13598952;
+			--wp--preset--color--link: #13598929;
 			--wp--preset--color--dark-heading: #fafafa;
 			--wp--preset--color--dark-text: #fafafa8f;
 			--wp--preset--color--dark-light-background: #fafafa0a;
@@ -1275,8 +1275,6 @@
 		href='wp-content/plugins/gutenverse/lib/framework/assets/dist/frontend-icon.css%3Fver=2.3.1.css' media='all' />
 	<link rel="https://api.w.org/" href="wp-json/index.html" />
 	<link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/35" />
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="index.htmlxmlrpc.php?rsd" />
-
 	<link rel="canonical" href="index.html" />
 	<link rel='shortlink' href='index.html' />
 	<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
@@ -1288,6 +1286,163 @@
 	<link rel="apple-touch-icon" href="wp-content/uploads/sites/101/2025/05/cropped-favicon-180x180.png" />
 	<meta name="msapplication-TileImage"
 		content="index.htmlwp-content/uploads/sites/101/2025/05/cropped-favicon-270x270.png" />
+	<style id="custom-hero-gradient">
+		/* Hero section gradient override - Light Theme */
+		.guten-U9CNeU:not(.background-animated),
+		.guten-U9CNeU.background-animated>.guten-background-animated .animated-layer,
+		.guten-element.guten-U9CNeU {
+			background: #f8f6f2 !important;
+		}
+
+		/* Hero Heading text color */
+		.guten-U9CNeU .guten-jYTq4b,
+		.guten-U9CNeU .guten-jYTq4b span,
+		.guten-U9CNeU .guten-Fxldoi {
+			color: #2d3e50 !important;
+		}
+
+		/* Hero Description text color */
+		.guten-U9CNeU .guten-PKvPUR p {
+			color: #6e7175 !important;
+		}
+
+		/* Get Started button - Gold */
+		.guten-U9CNeU .guten-N0hslg .guten-button {
+			background-color: #135989 !important;
+			color: #ffffff !important;
+			border: none !important;
+			font-weight: 600 !important;
+		}
+
+		/* Learn More button - Light Grey */
+		.guten-U9CNeU .guten-9Ma3AF .guten-button {
+			background-color: #f1f1f1 !important;
+			color: #2d3e50 !important;
+			border: none !important;
+			font-weight: 500 !important;
+		}
+
+		/* Hero Arch Background - Hidden for clean look */
+		.guten-D07MFE>.guten-column-wrapper>.guten-background-overlay,
+		.guten-D07MFE.background-animated>.guten-column-wrapper>.guten-background-overlay,
+		.guten-D07MFE.background-animated>.sticky-wrapper>.guten-column-wrapper>.guten-background-overlay {
+			background: transparent !important;
+		}
+
+		.guten-D07MFE:not(.background-animated)>.guten-column-wrapper,
+		.guten-D07MFE>.sticky-wrapper>.guten-column-wrapper {
+			background: transparent !important;
+		}
+
+		/* Global icon gradients - Slate Theme */
+		.icon.bg-style-gradient,
+		.icon-style-gradient {
+			background: linear-gradient(135deg, #2d3e50 0%, #1a2639 100%) !important;
+			-webkit-background-clip: text !important;
+			background-clip: text !important;
+			-webkit-text-fill-color: transparent !important;
+		}
+
+		.icon.bg-style-gradient i,
+		.icon.bg-style-gradient {
+			-webkit-text-fill-color: initial !important;
+		}
+
+		/* Service Boxes Background Override - Handled by Design System */
+		.guten-6pYJEa>.guten-background-overlay,
+		.guten-aXfuVV>.guten-background-overlay,
+		.guten-IfQgPd>.guten-background-overlay {
+			background: transparent !important;
+		}
+
+		.guten-6pYJEa:not(.background-animated),
+		.guten-6pYJEa.background-animated>.guten-inner-wrap>.guten-background-animated .animated-layer,
+		.guten-aXfuVV:not(.background-animated),
+		.guten-aXfuVV.background-animated>.guten-inner-wrap>.guten-background-animated .animated-layer,
+		.guten-IfQgPd:not(.background-animated),
+		.guten-IfQgPd.background-animated>.guten-inner-wrap>.guten-background-animated .animated-layer {
+			background-image: none !important;
+			background-color: #ffffff !important;
+		}
+
+		/* Leading Partners Arch Background - Gold/Beige Theme */
+		.guten-MRloPy>.guten-background-overlay {
+			background: radial-gradient(at center center, rgba(238, 197, 139, 0.15) 0%, rgba(248, 246, 242, 1) 71.2%) !important;
+		}
+
+		/* "Why Choose Us" Background Override */
+		.guten-hdaRTv>.guten-background-overlay,
+		.guten-c8EYjP>.guten-background-overlay,
+		.guten-ZpcE9Z>.guten-background-overlay {
+			background: transparent !important;
+		}
+
+		.guten-hdaRTv:not(.background-animated),
+		.guten-hdaRTv.background-animated>.guten-background-animated .animated-layer {
+			background-image: none !important;
+		}
+
+		/* Expertise That Matters Numbers Override */
+		.guten-25cYLP.guten-feature-list .icon img {
+			filter: hue-rotate(175deg) brightness(0.8) saturate(1.2) !important;
+		}
+
+
+		/* Navbar Ultra Clean Corporate */
+		.prim-glass-nav {
+			background: rgba(255, 255, 255, 0.92) !important;
+			backdrop-filter: blur(16px) !important;
+			-webkit-backdrop-filter: blur(16px) !important;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02) !important;
+			transition: all 0.3s ease !important;
+		}
+
+		.prim-glass-nav .gutenverse-menu>li>a {
+			color: #4a5568 !important;
+			font-weight: 500 !important;
+			transition: color 0.15s ease-in-out !important;
+		}
+
+		.prim-glass-nav .gutenverse-menu>li>a:hover,
+		.prim-glass-nav .gutenverse-menu>li.current-menu-item>a {
+			color: #135989 !important;
+		}
+
+		.prim-glass-nav .guten-b01p9O .guten-button {
+			background-color: #135989 !important;
+			color: #ffffff !important;
+			border-radius: 4px !important;
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+			font-weight: 500 !important;
+			letter-spacing: 0.025em !important;
+			transition: all 0.2s ease-in-out !important;
+			border: 1px solid transparent !important;
+		}
+
+		.prim-glass-nav .guten-b01p9O .guten-button:hover {
+			transform: translateY(-1px) !important;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+			background-color: #0e4468 !important;
+		}
+
+		.prim-glass-nav .guten-b01p9O .guten-button span,
+		.prim-glass-nav .guten-b01p9O .guten-button i {
+			color: #ffffff !important;
+		}
+
+		.prim-glass-nav .guten-b01p9O .guten-button:hover span,
+		.prim-glass-nav .guten-b01p9O .guten-button:hover i {
+			color: #ffffff !important;
+		}
+	</style>
+	<style id="custom-navbar-padding">
+		/* Navbar Padding left and right */
+		.guten-2VyYGc>.guten-container {
+			padding-left: 4vw !important;
+			padding-right: 4vw !important;
+		}
+	</style>
 </head>
 
 <body class="home page-template page-template-blank-canvas page page-id-35 wp-embed-responsive">
@@ -1343,7 +1498,6 @@
 												</li>
 												<li id="menu-item-70"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
-													<a href="appointment.html">Appointment</a>
 												</li>
 												<li id="menu-item-71"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
@@ -1397,10 +1551,8 @@
 							<div class="guten-column-wrapper" data-id="WiP5Ez">
 								<div class="guten-element guten-wrap-helper no-margin guten-sfthgm flex">
 									<div class="guten-inner-wrap" data-id="sfthgm">
-										<div class="gutenverse-special-mention"
-											style="display: inline-flex; align-items: center; background-color: #1a2639; border-radius: 30px; padding: 6px 16px; margin-bottom: 20px; color: #ffffff; font-weight: 600; font-size: 14px; letter-spacing: 0.5px; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-											<i class="fas fa-award"
-												style="margin-right: 8px; font-size: 16px; color: #c5a059;"></i>
+										<div class="gutenverse-special-mention prim-animate-shine"
+											style="display: inline-flex; align-items: center; background: #f1ece3; border-radius: 30px; padding: 6px 20px; margin-bottom: 24px; color: #6e7175; font-weight: 500; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; width: fit-content !important; position: relative; overflow: hidden;">
 											Chartered Accountants
 										</div>
 										<h1 class="wp-block-gutenverse-heading guten-element guten-jYTq4b">Your Trusted
@@ -1493,12 +1645,12 @@
 										<div
 											class="wp-block-gutenverse-image guten-element guten-image guten-BVSaI0 animated guten-element-hide desktop-fadeInLeft">
 											<div class="guten-image-wrapper"><img loading="lazy" decoding="async"
-													class="gutenverse-image-box-filled" src="images/sss.png"
+													class="gutenverse-image-box-filled" src="images/ssss.png"
 													height="1168" width="778" />
 											</div>
 										</div>
 										<div class="section-wrapper" data-id="QYTCh9">
-											<section
+											<!-- <section
 												class="wp-block-gutenverse-section guten-element guten-section guten-QYTCh9 hide-mobile layout-fullwidth align-stretch">
 												<div class="guten-container guten-column-gap-no">
 													<div
@@ -1506,7 +1658,8 @@
 														<div class="guten-column-wrapper" data-id="BafVk3">
 															<div
 																class="guten-element guten-wrap-helper no-margin guten-PzfWnw animated guten-element-hide desktop-fadeInLeft flex">
-																<div class="guten-inner-wrap" data-id="PzfWnw">
+																<div class="guten-inner-wrap" data-id="PzfWnw"
+																	style="background: #ffffff !important; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 20px;">
 																	<div class="section-wrapper" data-id="5uLgH2">
 																		<section
 																			class="wp-block-gutenverse-section guten-element guten-section guten-5uLgH2 layout-fullwidth align-stretch">
@@ -1575,7 +1728,7 @@
 														</div>
 													</div>
 												</div>
-											</section>
+											</section> -->
 										</div>
 									</div>
 								</div>
@@ -2437,7 +2590,7 @@
 			<div class="section-wrapper" data-id="hdaRTv">
 				<section
 					class="wp-block-gutenverse-section guten-element guten-section guten-hdaRTv layout-boxed align-stretch"
-					style="background-color: #fcfbf7 !important; padding: 100px 0;">
+					style="background-color: transparent !important; padding: 100px 0;">
 					<div class="guten-background-overlay"></div>
 					<div class="guten-container guten-column-gap-no">
 						<div class="wp-block-gutenverse-column guten-element guten-column guten-EortPb">
@@ -2661,7 +2814,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								ST</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Sarah
@@ -2711,7 +2864,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								DR</div><span
 																								class="profile-info"><strong
 																									class="profile-name">David
@@ -2761,7 +2914,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								LM</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Lina
@@ -2810,7 +2963,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								JF</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Jared
@@ -2860,7 +3013,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								CW</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Cynthia
@@ -2910,7 +3063,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								KL</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Kevin
@@ -2974,7 +3127,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								JF</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Jared
@@ -3024,7 +3177,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								CW</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Cynthia
@@ -3074,7 +3227,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								KL</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Kevin
@@ -3124,7 +3277,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								ST</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Sarah
@@ -3174,7 +3327,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								DR</div><span
 																								class="profile-info"><strong
 																									class="profile-name">David
@@ -3224,7 +3377,7 @@
 																					<div class="comment-bio">
 																						<div class="bio-details">
 																							<div class="profile-image"
-																								style="background: #C5A059; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
+																								style="background: #2d3e50; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; width: 50px; height: 50px; flex-shrink: 0; margin-right: 15px;">
 																								LM</div><span
 																								class="profile-info"><strong
 																									class="profile-name">Lina
@@ -4003,6 +4156,7 @@
 		id="gutenverse-companion-frontend-js"></script>
 	<script src="wp-content/plugins/gutenverse/lib/framework/assets/js/frontend/animation-basic.js%3Fver=2.3.1"
 		id="gutenverse-core-frontend-animation-basic-script-js"></script>
+	<script src="wp-content/themes/acctop/assets/js/prim-animations.js"></script>
 </body>
 
 </html>
