@@ -88,6 +88,7 @@ img {
 }
 
 /* Hero Section Mobile Overflow Fixes */
+/* Hero Section Mobile Overflow & Navigation Fixes */
 @media (max-width: 768px) {
 
     /* Reset negative margins that cause horizontal scroll */
@@ -101,45 +102,146 @@ img {
         margin-left: 0 !important;
     }
 
-    /* Prevent container overflow */
-    .guten-container {
+    /* Prevent specific hero container overflow without blocking fixed menus */
+    .guten-U9CNeU .guten-container {
         max-width: 100vw !important;
         overflow-x: hidden !important;
     }
 
-    /* Force hero buttons into one row with more space */
+    /* Force hero buttons into one row with refined spacing */
     .guten-s0sRgO.flex,
     .guten-element.guten-s0sRgO {
         display: flex !important;
         flex-direction: row !important;
-        flex-wrap: wrap !important;
-        /* Allow wrapping if absolutely necessary on tiny screens */
-        gap: 16px !important;
-        /* Increased gap */
+        flex-wrap: nowrap !important;
+        /* Prevent wrapping */
+        gap: 20px !important;
+        /* Increased gap for better tap targets */
         justify-content: flex-start !important;
         width: 100% !important;
-        margin-top: 10px !important;
-    }
-
-    .guten-element.guten-N0hslg {
-        margin-right: 16px !important;
-        /* Explicit right margin for the first button */
+        margin-top: 24px !important;
+        /* Standardized spacing from text above */
     }
 
     .guten-element.guten-N0hslg,
     .guten-element.guten-9Ma3AF {
         width: auto !important;
-        padding-right: 0 !important;
-        margin-bottom: 0 !important;
-        margin-left: 0 !important;
         flex: 0 1 auto !important;
+        padding: 0 !important;
+        /* Reset all restrictive padding found in audit */
+        margin: 0 !important;
     }
 
     .guten-N0hslg.guten-button-wrapper .guten-button,
     .guten-9Ma3AF.guten-button-wrapper .guten-button {
-        padding: 12px 20px !important;
-        /* Slightly more compact for mobile row */
+        padding: 14px 24px !important;
+        /* Slightly more premium sizing */
         white-space: nowrap !important;
+        display: inline-flex !important;
+    }
+
+    /* Premium Mobile Menu (Gutenverse) Fixes */
+    .gutenverse-menu-wrapper {
+        z-index: 999999 !important;
+        background: #ffffff !important;
+        /* Solid white for better contrast */
+        box-shadow: 10px 0 40px rgba(0, 0, 0, 0.15) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        /* Identity panel on top, menu below */
+        height: 100vh !important;
+        width: 85% !important;
+        /* Slightly more room for items */
+        max-width: 360px !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: -110% !important;
+        /* Start off-screen */
+        transition: left 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    }
+
+    .gutenverse-menu-wrapper.active {
+        left: 0 !important;
+    }
+
+    .guten-nav-overlay {
+        z-index: 999998 !important;
+        background: rgba(0, 50, 100, 0.2) !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease !important;
+    }
+
+    .guten-nav-overlay.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Identity Panel (Logo + Close) */
+    .gutenverse-nav-identity-panel {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 24px 20px !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+        background: #ffffff !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .gutenverse-close-menu {
+        position: static !important;
+        margin: 0 !important;
+        color: var(--prim-dark-slate) !important;
+        font-size: 24px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Menu Items */
+    .gutenverse-menu-container {
+        flex: 1 !important;
+        overflow-y: auto !important;
+        padding: 20px 0 !important;
+    }
+
+    .gutenverse-menu li a {
+        font-family: var(--prim-font-heading) !important;
+        font-size: 18px !important;
+        font-weight: 500 !important;
+        color: var(--prim-dark-slate) !important;
+        padding: 16px 25px !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .gutenverse-menu li a:hover {
+        padding-left: 32px !important;
+        color: var(--prim-accent-gold) !important;
+        background: rgba(19, 89, 137, 0.03) !important;
+    }
+
+    /* Hamburger Button Refinement */
+    .gutenverse-hamburger-menu {
+        background: var(--prim-white) !important;
+        border: 1px solid var(--prim-glass-border) !important;
+        border-radius: 8px !important;
+        padding: 10px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .gutenverse-hamburger-menu i {
+        color: var(--prim-accent-gold) !important;
+        font-size: 20px !important;
     }
 }
 
