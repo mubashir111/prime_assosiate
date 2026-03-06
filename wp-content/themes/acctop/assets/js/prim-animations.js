@@ -1,56 +1,87 @@
 /**
  * PRIM & Associates - Professional Design System
- * Scroll-triggered Fade Animations
+ * GSAP & ScrollTrigger Animations
  */
 
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
+
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Define the elements we want to animate
-    // We target typography, images, and buttons inside content sections
-    const selectors = [
-        '.guten-section h2:not(.prim-ignore-anim)',
-        '.guten-section h3:not(.prim-ignore-anim)',
-        '.guten-section p:not(.prim-ignore-anim)',
-        '.guten-section .guten-image:not(.prim-ignore-anim)',
-        '.guten-section img:not(.prim-ignore-anim)',
-        '.guten-section .guten-button:not(.prim-ignore-anim)'
-    ];
-
-    // Select all target elements
-    const elementsToAnimate = document.querySelectorAll(selectors.join(', '));
-
-    // 2. Add initial hidden class
-    elementsToAnimate.forEach(el => {
-        // Skip elements that are part of the pre-existing Hero animations or specific widgets
-        if (el.closest('.prim-hero-card') || el.closest('.guten-icon-box-wrapper') || el.closest('.prim-glass-nav')) {
-            return;
-        }
-        el.classList.add('prim-fade-elem');
-    });
-
-    // 3. Set up Intersection Observer
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -50px 0px', // Trigger slightly before the element fully enters the viewport
-        threshold: 0.15 // 15% of element must be visible
-    };
-
-    const animationObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                // Add a slight stagger effect based on order
-                setTimeout(() => {
-                    entry.target.classList.add('prim-in-view');
-                }, index * 100); // 100ms stagger per element intersecting at the same time
-
-                // Stop observing once animated
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // 4. Start observing the elements with the initial class
-    const observerTargets = document.querySelectorAll('.prim-fade-elem');
-    observerTargets.forEach(target => {
-        animationObserver.observe(target);
-    });
+    initScrollAnimations();
 });
+
+function initScrollAnimations() {
+    // 1. Text Scaling & Fading (Starvium Style)
+    // Target main headings (H1, H2, H3)
+    const headings = document.querySelectorAll('.guten-section h1, .guten-section h2, .guten-section h3, .guten-section h4');
+
+    headings.forEach(heading => {
+        // Skip elements with ignore class
+        if (heading.classList.contains('prim-ignore-anim')) return;
+
+        // Set initial state
+        gsap.set(heading, {
+            opacity: 0,
+            scale: 0.88,
+            y: 30,
+            transformOrigin: "center center"
+        });
+
+        // Create the scroll-bound animation
+        gsap.to(heading, {
+            scrollTrigger: {
+                trigger: heading,
+                start: "top 90%", // Start when top of heading hits 90% of viewport
+                end: "top 60%",   // Full opacity/scale by secondary point
+                scrub: 1,         // Smoothly tie animation to scroll (1sec catch up)
+                toggleActions: "play none none reverse"
+            },
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 1.5,
+            ease: "power2.out"
+        });
+    });
+
+    // 2. Card Entrance (Staggered)
+    // Target columns or boxes inside services/features
+    const cardContainers = document.querySelectorAll('.guten-column, .guten-icon-box-wrapper');
+
+    // We want to animate the inner box of cards
+    const cards = document.querySelectorAll('.prim-glass-card, .guten-icon-box-wrapper');
+
+    cards.forEach(card => {
+        gsap.set(card, {
+            opacity: 0,
+            y: 50
+        });
+
+        gsap.to(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 95%",
+                end: "top 80%",
+                scrub: 1,
+                toggleActions: "play none none reverse"
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power1.out"
+        });
+    });
+
+    // 3. Special Hero Animation (Immediate or faster scroll)
+    const heroTitle = document.querySelector('.guten-hero-section h1, .guten-pCnxvl'); // .guten-pCnxvl is the 'About' but maybe hero has similar
+    if (heroTitle) {
+        gsap.to(heroTitle, {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "expo.out",
+            delay: 0.3
+        });
+    }
+}
