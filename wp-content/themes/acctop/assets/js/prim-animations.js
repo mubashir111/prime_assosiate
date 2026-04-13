@@ -7,8 +7,62 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
+    initPreloader();
     initScrollAnimations();
 });
+
+function initPreloader() {
+    const preloader = document.getElementById('prim-preloader');
+    const logo = document.querySelector('.preloader-logo');
+    const bar = document.querySelector('.preloader-bar');
+
+    if (!preloader || !logo || !bar) return;
+
+    // Safety fallback: ensure preloader is removed AFTER 5 seconds no matter what
+    const safetyTimeout = setTimeout(() => {
+        dismissPreloader();
+    }, 5000);
+
+    function dismissPreloader() {
+        clearTimeout(safetyTimeout);
+        if (window.gsap) {
+            const outroTl = gsap.timeline();
+            outroTl.to(logo, { scale: 1.1, opacity: 0, duration: 0.6 })
+                .to(preloader, { yPercent: -100, duration: 0.8, ease: "expo.inOut" }, "-=0.2")
+                .set(preloader, { display: 'none' });
+        } else {
+            preloader.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+            preloader.style.opacity = "0";
+            preloader.style.transform = "translateY(-100%)";
+            setTimeout(() => { preloader.style.display = 'none'; }, 800);
+        }
+    }
+
+    // Intro Animation
+    if (window.gsap) {
+        const tl = gsap.timeline();
+        tl.to(logo, { opacity: 1, scale: 1, duration: 1, ease: "power2.out" })
+          .to(bar, { width: "70%", duration: 2, ease: "power1.inOut" });
+    } else {
+        logo.style.opacity = "1";
+        bar.style.width = "70%";
+    }
+
+    // Handle Finish Loading
+    window.addEventListener('load', () => {
+        if (window.gsap) {
+            gsap.to(bar, {
+                width: "100%",
+                duration: 0.5,
+                ease: "power1.out",
+                onComplete: dismissPreloader
+            });
+        } else {
+            bar.style.width = "100%";
+            setTimeout(dismissPreloader, 500);
+        }
+    });
+}
 
 function initScrollAnimations() {
     // 1. Text Scaling & Fading (Starvium Style)

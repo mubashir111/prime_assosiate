@@ -572,3 +572,49 @@ body section {
     pointer-events: none;
     z-index: 10;
 }
+
+/* Premium GSAP Preloader */
+#prim-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--prim-dark-slate);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+    overflow: hidden;
+}
+
+.preloader-content {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+}
+
+.preloader-logo {
+    width: 220px;
+    height: auto;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.preloader-bar-container {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.preloader-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--prim-accent-gold);
+    box-shadow: 0 0 10px var(--prim-accent-gold);
+}

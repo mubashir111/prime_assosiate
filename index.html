@@ -10,6 +10,8 @@
 	<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link rel="preload" as="image" href="images/xxxxx.png" fetchpriority="high">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js">
 	<link rel="alternate" type="application/rss+xml" title="PRIM & Associates &raquo; Feed" href="feed/index.html" />
 	<link rel="alternate" type="application/rss+xml" title="PRIM & Associates &raquo; Comments Feed"
 		href="comments/feed/index.html" />
@@ -1638,9 +1640,22 @@
 			padding-right: 4vw !important;
 		}
 	</style>
+	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" as="script">
+	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" as="script">
 </head>
 
-<body class="home page-template page-template-blank-canvas page page-id-35 wp-embed-responsive">
+<body
+	class="home page-template page-template-gutenverse-full-width page-template-gutenverse-full-width-php page page-id-18 gutenverse-body gutenverse-themes-builder:acctop-2.0.2">
+
+	<!-- GSAP Preloader -->
+	<div id="prim-preloader">
+		<div class="preloader-content">
+			<img src="wp-content/uploads/sites/101/2025/05/prim-header-logo.png" alt="PRIM Logo" class="preloader-logo">
+			<div class="preloader-bar-container">
+				<div class="preloader-bar"></div>
+			</div>
+		</div>
+	</div>
 
 	<div class="wp-site-blocks">
 		<div class="guten-XMKGXO   entry-content is-layout-constrained guten-post-content guten-element">

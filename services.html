@@ -9,6 +9,8 @@
 	<title>Services &#8211; PRIM & Associates</title>
 	<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js">
 	<link rel="alternate" type="application/rss+xml" title="PRIM & Associates &raquo; Feed" href="feed/index.html" />
 	<link rel="alternate" type="application/rss+xml" title="PRIM & Associates &raquo; Comments Feed"
 		href="comments/feed/index.html" />
@@ -1442,6 +1444,16 @@
 </head>
 
 <body class="page-template page-template-blank-canvas page page-id-43 wp-embed-responsive">
+
+	<!-- GSAP Preloader -->
+	<div id="prim-preloader">
+		<div class="preloader-content">
+			<img src="wp-content/uploads/sites/101/2025/05/prim-header-logo.png" alt="PRIM Logo" class="preloader-logo">
+			<div class="preloader-bar-container">
+				<div class="preloader-bar"></div>
+			</div>
+		</div>
+	</div>
 
 	<div class="wp-site-blocks">
 		<div class="guten-XMKGXO   entry-content is-layout-constrained guten-post-content guten-element">
@@ -2892,6 +2904,8 @@
 		id="gutenverse-companion-frontend-js"></script>
 	<script src="wp-content/plugins/gutenverse/lib/framework/assets/js/frontend/animation-basic.js%3Fver=2.3.1"
 		id="gutenverse-core-frontend-animation-basic-script-js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 	<script src="wp-content/themes/acctop/assets/js/prim-animations.js"></script>
 </body>
 
