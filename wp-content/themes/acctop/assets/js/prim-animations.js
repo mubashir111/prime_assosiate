@@ -66,15 +66,15 @@ function initPreloader() {
 
 function initScrollAnimations() {
     // 1. Text Scaling & Fading (Starvium Style)
-    // Target main headings (H1, H2, H3)
-    const headings = document.querySelectorAll('.guten-section h1, .guten-section h2, .guten-section h3, .guten-section h4');
+    // Target main headings, paragraphs, buttons, and links for uniform entrance
+    const animElements = document.querySelectorAll('.guten-section h1, .guten-section h2, .guten-section h3, .guten-section h4, .guten-section p, .guten-section .guten-button, .guten-section a:not(.guten-image-wrapper)');
 
-    headings.forEach(heading => {
+    animElements.forEach(element => {
         // Skip elements with ignore class
-        if (heading.classList.contains('prim-ignore-anim')) return;
+        if (element.classList.contains('prim-ignore-anim')) return;
 
         // Set initial state
-        gsap.set(heading, {
+        gsap.set(element, {
             opacity: 0,
             scale: 0.88,
             y: 30,
@@ -82,10 +82,10 @@ function initScrollAnimations() {
         });
 
         // Create the scroll-bound animation
-        gsap.to(heading, {
+        gsap.to(element, {
             scrollTrigger: {
-                trigger: heading,
-                start: "top 90%", // Start when top of heading hits 90% of viewport
+                trigger: element,
+                start: "top 90%", // Start when top of element hits 90% of viewport
                 end: "top 60%",   // Full opacity/scale by secondary point
                 scrub: 1,         // Smoothly tie animation to scroll (1sec catch up)
                 toggleActions: "play none none reverse"
