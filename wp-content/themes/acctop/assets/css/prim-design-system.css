@@ -87,7 +87,276 @@ img {
     height: auto !important;
 }
 
+
+/* Nav Logo - same size as index page */
+.guten-Y7ASQF img {
+    width: 250px !important;
+    height: auto !important;
+    max-width: none !important;
+}
+
+/* About Section - Premium Visual Enhancement */
+.guten-element.guten-WujYsu {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    background: linear-gradient(135deg, #f0f6fb 0%, #f8f6f2 40%, #eef4fa 100%) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Decorative radial glow behind right image column */
+.guten-element.guten-WujYsu::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(19, 89, 137, 0.08) 0%, transparent 68%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Decorative bottom-left accent */
+.guten-element.guten-WujYsu::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(77, 170, 87, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Left column reduced padding for balance */
+.guten-nI3VFK > .sticky-wrapper > .guten-column-wrapper,
+.guten-nI3VFK > .guten-column-wrapper {
+    padding-right: 40px !important;
+}
+
+/* Heading - bolder & larger */
+.guten-pCnxvl {
+    font-size: 50px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* Icon boxes - premium white cards & equal height layout */
+.guten-k3KW33 > .guten-container,
+.guten-mc48Si > .guten-container {
+    display: flex !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+}
+
+.guten-k3KW33 .guten-column,
+.guten-mc48Si .guten-column {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.guten-k3KW33 .guten-column-wrapper,
+.guten-mc48Si .guten-column-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    height: 100% !important;
+}
+
+.guten-aD6fMQ,
+.guten-O1NI6i,
+.guten-1Tt21A,
+.guten-IbW81d {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    height: 100% !important;
+}
+
+.guten-aD6fMQ .guten-icon-box-wrapper,
+.guten-O1NI6i .guten-icon-box-wrapper,
+.guten-1Tt21A .guten-icon-box-wrapper,
+.guten-IbW81d .guten-icon-box-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    flex: 1 1 auto !important;
+    height: 100% !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(8px) !important;
+    border-radius: 14px !important;
+    padding: 22px 24px !important;
+    box-shadow: 0 4px 20px rgba(19, 89, 137, 0.08) !important;
+    border: 1px solid rgba(19, 89, 137, 0.1) !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    margin-bottom: 6px !important;
+}
+
+.guten-aD6fMQ .guten-icon-box-wrapper:hover,
+.guten-O1NI6i .guten-icon-box-wrapper:hover,
+.guten-1Tt21A .guten-icon-box-wrapper:hover,
+.guten-IbW81d .guten-icon-box-wrapper:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 35px rgba(19, 89, 137, 0.18) !important;
+    border-color: rgba(19, 89, 137, 0.25) !important;
+    background: #ffffff !important;
+}
+
+/* Hide the tick icons entirely */
+.guten-aD6fMQ .icon-box-header,
+.guten-O1NI6i .icon-box-header,
+.guten-1Tt21A .icon-box-header,
+.guten-IbW81d .icon-box-header {
+    display: none !important;
+}
+
+/* Icon box title */
+.guten-aD6fMQ .title,
+.guten-O1NI6i .title,
+.guten-1Tt21A .title,
+.guten-IbW81d .title {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #135989 !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+}
+
+/* Icon box description */
+.guten-aD6fMQ .icon-box-description,
+.guten-O1NI6i .icon-box-description,
+.guten-1Tt21A .icon-box-description,
+.guten-IbW81d .icon-box-description {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #4a5568 !important;
+    margin: 0 !important;
+}
+
+
+
+/* About Page — Our Vision & Our Mission Tick Removal & Layout */
+.guten-HtBVZ6 .icon-box-header,
+.guten-GauFEB .icon-box-header {
+    display: none !important;
+}
+
+.guten-HtBVZ6 .title,
+.guten-GauFEB .title {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #135989 !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+}
+
+.guten-HtBVZ6 .icon-box-description,
+.guten-GauFEB .icon-box-description {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #4a5568 !important;
+    margin: 0 !important;
+}
+
+/* About Section Buttons Alignment & Spacing */
+/* Hide the default horizontal divider to create a clean modern layout */
+.guten-NbmtAt {
+    display: none !important;
+}
+
+/* Align and space the buttons container */
+.guten-oU97QY,
+.guten-DH9rp0 {
+    margin-top: 32px !important;
+    margin-bottom: 12px !important;
+    width: 100% !important;
+}
+
+.guten-oU97QY .guten-inner-wrap,
+.guten-DH9rp0 .guten-inner-wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 16px !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* Ensure button wrappers behave in flex layout */
+.guten-Criys4,
+.guten-fYnby1,
+.guten-119oBu,
+.guten-azMzDw {
+    display: inline-flex !important;
+    margin: 0 !important;
+    width: auto !important;
+}
+
+/* Premium uniform button styles */
+.guten-Criys4 .guten-button,
+.guten-fYnby1 .guten-button,
+.guten-119oBu .guten-button,
+.guten-azMzDw .guten-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 48px !important;
+    padding: 0 28px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
+    border-radius: 8px !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+/* Primary Button Styling (More About Us / Our Services) */
+.guten-Criys4 .guten-button,
+.guten-119oBu .guten-button {
+    background-color: #135989 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(19, 89, 137, 0.2) !important;
+    border: 1px solid transparent !important;
+}
+
+.guten-Criys4 .guten-button:hover,
+.guten-Criys4 .guten-button:focus,
+.guten-119oBu .guten-button:hover,
+.guten-119oBu .guten-button:focus {
+    background-color: #0e4468 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(19, 89, 137, 0.35) !important;
+}
+
+/* Secondary Button Styling (Book A Call) */
+.guten-fYnby1 .guten-button,
+.guten-azMzDw .guten-button {
+    background-color: transparent !important;
+    color: #135989 !important;
+    border: 2px solid #135989 !important;
+    box-shadow: none !important;
+}
+
+.guten-fYnby1 .guten-button:hover,
+.guten-fYnby1 .guten-button:focus,
+.guten-azMzDw .guten-button:hover,
+.guten-azMzDw .guten-button:focus {
+    background-color: #135989 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(19, 89, 137, 0.25) !important;
+}
+
+
 /* Hero Section Mobile Overflow Fixes */
+
 /* Hero Section Mobile Overflow & Navigation Fixes */
 @media (max-width: 768px) {
 
@@ -265,6 +534,13 @@ h6 {
     font-weight: 700 !important;
     letter-spacing: -0.01em !important;
 }
+
+/* Service Page Hero Header - force white text on blue background */
+.section-wrapper[style*="background: #135989"] h1,
+.section-wrapper[style*="background:#135989"] h1 {
+    color: #ffffff !important;
+}
+
 
 /* Force Global Section Backgrounds & Eliminate Blue Vignettes */
 .wp-block-gutenverse-section:not(.prim-glass-nav)>.guten-background-overlay,
@@ -731,4 +1007,70 @@ body section {
 .gutenverse-menu {
     justify-content: flex-end !important;
     width: 100% !important;
+}
+
+/* Bulletproof CSS Entrance Animations */
+.guten-section h1, 
+.guten-section h2, 
+.guten-section h3, 
+.guten-section h4, 
+.guten-section p, 
+.guten-section .guten-button, 
+.guten-section a:not(.guten-image-wrapper), 
+.prim-glass-card, 
+.guten-icon-box-wrapper {
+    animation: primSafeFadeInUp 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes primSafeFadeInUp {
+    0% { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* GDPR Form Fix to prevent weird column splitting and text wrapping */
+.guten-gdpr-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    gap: 10px !important;
+    column-count: auto !important;
+    columns: auto !important;
+}
+
+.guten-gdpr-input-wrapper {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    height: 22px !important; /* matches font line height */
+}
+
+.guten-gdpr-wrapper .gdpr-label {
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    column-count: auto !important;
+    columns: auto !important;
+    text-align: left !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    color: #4a5568 !important;
+}
+
+.guten-gdpr-wrapper .gdpr-label a {
+    display: inline !important;
+    color: #135989 !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
 }

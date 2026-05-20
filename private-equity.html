@@ -9,7 +9,7 @@
 	<link rel='stylesheet' id='custom-styling-css' href='wp-content/themes/acctop/assets/css/custom-styling.css' media='all' />
 	<link rel='stylesheet' id='prim-design-system-css' href='wp-content/themes/acctop/assets/css/prim-design-system.css' media='all' />
     <style>
-        .service-page-wrapper { padding: 80px 0; background-color: #f8fafd; }
+        .service-page-wrapper { padding: 80px 0; background-color: #fff; }
         .service-container { display: flex; gap: 40px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .service-sidebar { flex: 1; min-width: 300px; }
         .service-content { flex: 2.5; }
@@ -33,45 +33,204 @@
         .cta-btn:hover { background: #f0f4f8; transform: scale(1.05); }
         @media (max-width: 992px) { .service-container { flex-direction: column; } .service-sidebar { order: 2; } .service-content { order: 1; } }
     </style>
+
+    
+    <!-- Gutenverse Styles for Navigation -->
+    <link rel='stylesheet' id='fontawesome-gutenverse-css'
+		href='wp-content/uploads/sites/101/gutenverse/font-icon/fonts/fontawesome/css/all.min.css%3Fver=2.3.1.css'
+		media='all' />
+    <link rel='stylesheet' id='gutenverse-iconlist-css'
+		href='wp-content/uploads/sites/101/gutenverse/font-icon/fonts/gtnicon/gtnicon.css%3Fver=2.3.1.css'
+		media='all' />
+    <link rel='stylesheet' id='gutenverse-form-frontend-form-input-general-style-css'
+		href='wp-content/plugins/gutenverse-form/assets/css/general-input.css%3Fver=2.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-form-frontend-form-builder-style-css'
+		href='wp-content/plugins/gutenverse-form/assets/css/frontend/form-builder.css%3Fver=2.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-form-frontend-form-input-email-style-css'
+		href='wp-content/plugins/gutenverse-form/assets/css/frontend/form-input-email.css%3Fver=2.3.1.css'
+		media='all' />
+    <link rel='stylesheet' id='gutenverse-form-frontend-form-input-submit-style-css'
+		href='wp-content/plugins/gutenverse-form/assets/css/frontend/form-input-submit.css%3Fver=2.3.1.css'
+		media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-advanced-heading-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/advanced-heading.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-button-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/button.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-divider-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/divider.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-feature-list-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/feature-list.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-fun-fact-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/fun-fact.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-heading-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/heading.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-icon-box-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/icon-box.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-icon-list-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/icon-list.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-icon-list-item-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/icon-list-item.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-image-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/image.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-logo-slider-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/logo-slider.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-nav-menu-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/nav-menu.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-post-block-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/post-block.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-post-content-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/post-content.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-post-list-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/post-list.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-progress-bar-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/progress-bar.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-social-icons-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/social-icons.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-social-icon-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/social-icon.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-testimonials-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/testimonials.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-text-editor-style-css'
+		href='wp-content/plugins/gutenverse/assets/css/frontend/text-editor.css%3Fver=3.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-core-frontend-column-style-css'
+		href='wp-content/plugins/gutenverse/lib/framework/assets/css/frontend/column.css%3Fver=2.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-core-frontend-section-style-css'
+		href='wp-content/plugins/gutenverse/lib/framework/assets/css/frontend/section.css%3Fver=2.3.1.css'
+		media='all' />
+    <link rel='stylesheet' id='gutenverse-core-frontend-wrapper-style-css'
+		href='wp-content/plugins/gutenverse/lib/framework/assets/css/frontend/wrapper.css%3Fver=2.3.1.css'
+		media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-style-css'
+		href='wp-content/plugins/gutenverse/lib/framework/assets/css/frontend.css%3Fver=2.3.1.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-companion-frontend-block-css'
+		href='wp-content/themes/acctop/assets/css/essential/frontend-essential.css%3Fver=2.0.2.css' media='all' />
+    <link rel='stylesheet' id='gutenverse-generated-template-css'
+		href='wp-content/uploads/sites/101/gutenverse/css/gutenverse-template-blank-canvas-535297.css%3Fver=535297.css'
+		media='all' />
+    <link rel='stylesheet' id='gutenverse-generated-content-css'
+		href='wp-content/uploads/sites/101/gutenverse/css/gutenverse-content-35-535297.css%3Fver=535297.css'
+		media='all' />
+    <link rel='stylesheet' id='gutenverse-google-font-css'
+		href='https://fonts.googleapis.com/css?family=Alfa+Slab+One%3A400%2C400italic%2C700%2C700italic%2Cbold%7CDM+Sans%3A400%2C400italic%2C700%2C700italic%2C500&#038;display=swap&#038;ver=2.3.1'
+		media='all' />
+    <link rel='stylesheet' id='gutenverse-frontend-icon-css'
+		href='wp-content/plugins/gutenverse/lib/framework/assets/dist/frontend-icon.css%3Fver=2.3.1.css' media='all' />
 </head>
 
 <body class="page-template page-template-gutenverse-full-width">
 	<div class="wp-site-blocks">
 		<div class="guten-XMKGXO entry-content is-layout-constrained guten-post-content guten-element">
 			<div class="section-wrapper" data-id="2VyYGc">
-				<section class="wp-block-gutenverse-section guten-element guten-section guten-2VyYGc layout-fullwidth align-stretch prim-glass-nav" style="position: sticky; top: 0; z-index: 9999;">
+				<section
+					class="wp-block-gutenverse-section guten-element guten-section guten-2VyYGc layout-fullwidth align-stretch prim-glass-nav"
+					style="position: sticky; top: 0; z-index: 9999;">
 					<div class="guten-container guten-column-gap-no">
 						<div class="wp-block-gutenverse-column guten-element guten-column guten-4WRTsx">
 							<div class="guten-column-wrapper" data-id="4WRTsx">
-								<div class="wp-block-gutenverse-image guten-element guten-image guten-Y7ASQF"><a class="guten-image-wrapper" href="index.html"><img loading="lazy" decoding="async" class="gutenverse-image-box-filled" src="images/Prim_Blue.png" alt="PRIM Logo" height="85" width="350" /></a></div>
+								<div class="wp-block-gutenverse-image guten-element guten-image guten-Y7ASQF"><a
+										class="guten-image-wrapper" href="index.html"><img loading="lazy"
+											decoding="async" class="gutenverse-image-box-filled"
+											src="images/Prim_Blue.png" alt="PRIM & Associates Logo" height="85"
+											width="350" /></a></div>
 							</div>
 						</div>
+
+
+
 						<div class="wp-block-gutenverse-column guten-element guten-column guten-zLIHWA">
 							<div class="guten-column-wrapper" data-id="zLIHWA">
-								<div id="guten-RgkjUx" class="guten-element guten-nav-menu nav-menu break-point-tablet submenu-click-title " data-item-indicator="fas fa-chevron-down" data-close-on-click="1">
-									<div class="gutenverse-hamburger-wrapper"><button class="gutenverse-hamburger-menu" aria-label="Open Menu"><i aria-hidden="true" class="fas fa-bars"></i></button></div>
+								<div id="guten-RgkjUx"
+									class="guten-element guten-nav-menu nav-menu break-point-tablet submenu-click-title "
+									data-item-indicator="fas fa-chevron-down" data-close-on-click="1">
+									<div class="gutenverse-hamburger-wrapper">
+										<button class="gutenverse-hamburger-menu" aria-label="Open Menu">
+											<i aria-hidden="true" class="fas fa-bars"></i>
+										</button>
+									</div>
 									<div class="guten-nav-overlay"></div>
 									<div class="gutenverse-menu-wrapper">
 										<div class="gutenverse-menu-container">
 											<ul id="menu-acctop-1" class="gutenverse-menu">
-												<li class="menu-item"><a href="index.html">Home</a></li>
-												<li class="menu-item"><a href="about.html">About</a></li>
-												<li class="menu-item current-menu-item"><a href="services.html">Services</a></li>
-												<li class="menu-item"><a href="team.html">Team</a></li>
-												<li class="menu-item"><a href="contact.html">Contact Us</a></li>
-												<li class="menu-item"><a href="blog.html">Blog</a></li>
+												<li id="menu-item-60"
+													class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-60">
+													<a href="index.html" aria-current="page">Home</a>
+												</li>
+												<li id="menu-item-61"
+													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61">
+													<a href="about.html">About</a>
+												</li>
+												<li id="menu-item-62"
+													class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-has-children menu-item-62">
+													<a href="services.html">Services</a>
+													<ul class="sub-menu">
+														<li><a href="audit-assurance.html">Audit and Assurance</a></li>
+														<li><a href="tax-regulatory.html">Tax and Regulatory</a></li>
+														<li><a href="corporate-law.html">Corporate Law Services</a></li>
+														<li><a href="accounting-outsourcing.html">Accounting
+																Outsourcing</a></li>
+														<li><a href="corporate-finance.html">Corporate Finance</a></li>
+														<li><a href="outsourced-cfo.html">Outsourced CFO</a></li>
+														<li><a href="sme-ipo.html">SME IPO Advisory</a></li>
+														<li><a href="sports-finance.html">Sports Finance</a></li>
+														<li><a href="government-advisory.html">Government Advisory</a>
+														</li>
+														<li><a href="deal-advisory.html">Deal Advisory</a></li>
+														<li><a href="wealth-management.html">Wealth Management</a></li>
+														<li><a href="private-equity.html">Private Equity</a></li>
+													</ul>
+												</li>
+												<li id="menu-item-68"
+													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68">
+													<a href="team.html">Team</a>
+												</li>
+												<li id="menu-item-70"
+													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
+												</li>
+												<li id="menu-item-71"
+													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
+													<a href="contact.html">Contact Us</a>
+												</li>
+												<li id="menu-item-72"
+													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72">
+													<a href="blog.html">Blog</a>
+												</li>
 											</ul>
+										</div>
+										<div>
+											<div class="gutenverse-nav-identity-panel">
+												<div class="gutenverse-nav-site-title">
+													<a href="index.html" class="gutenverse-nav-logo"><img
+															decoding="async" src="images/Prim_Blue.png"
+															alt="PRIM & Associates - Accounting Firm &amp; Company (FSE) WordPress Theme"></a>
+												</div>
+												<button class="gutenverse-close-menu" aria-label="Close Menu"><i
+														aria-hidden="true" class="fas fa-times"></i></button>
+											</div>
 										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+
+
+
+						<div
+							class="wp-block-gutenverse-column guten-element guten-column guten-YgaGOg hide-tablet hide-mobile">
+							<div class="guten-column-wrapper" data-id="YgaGOg">
+								<div class="guten-element guten-button-wrapper guten-b01p9O"><a
+										class="guten-button guten-button-sm" href="appointment.html"><i
+											class="fa-lg fas fa-phone"></i><span>Book A Call</span></a></div>
 							</div>
 						</div>
 					</div>
 				</section>
 			</div>
 
-            <div class="section-wrapper" style="background: #135989; padding: 60px 0; color: white; text-align: center;">
-                <h1 style="font-size: 42px; font-weight: 800;">Private Equity</h1>
+            <!-- Page Header -->
+            <div class="section-wrapper" style="background: #135989; padding: 120px 20px 80px; color: white; text-align: center;">
+                <h1 style="font-size: 42px; font-weight: 800; color: #ffffff;">Private Equity</h1>
                 <p style="opacity: 0.8; font-size: 18px;">Expert financial advisory for private equity firms.</p>
             </div>
 

@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
     initPreloader();
-    initScrollAnimations();
 });
 
 function initPreloader() {
@@ -29,12 +28,16 @@ function initPreloader() {
             const outroTl = gsap.timeline();
             outroTl.to(logo, { scale: 1.1, opacity: 0, duration: 0.6 })
                 .to(preloader, { yPercent: -100, duration: 0.8, ease: "expo.inOut" }, "-=0.2")
-                .set(preloader, { display: 'none' });
+                .set(preloader, { display: 'none' })
+                .call(initScrollAnimations);
         } else {
             preloader.style.transition = "opacity 0.8s ease, transform 0.8s ease";
             preloader.style.opacity = "0";
             preloader.style.transform = "translateY(-100%)";
-            setTimeout(() => { preloader.style.display = 'none'; }, 800);
+            setTimeout(() => { 
+                preloader.style.display = 'none'; 
+                initScrollAnimations();
+            }, 800);
         }
     }
 
@@ -65,77 +68,39 @@ function initPreloader() {
 }
 
 function initScrollAnimations() {
-    // 1. Text Scaling & Fading (Starvium Style)
-    // Target main headings, paragraphs, buttons, and links for uniform entrance
-    const animElements = document.querySelectorAll('.guten-section h1, .guten-section h2, .guten-section h3, .guten-section h4, .guten-section p, .guten-section .guten-button, .guten-section a:not(.guten-image-wrapper)');
+    // 1. Custom Number Counter (Using ScrollTrigger)
+    const counters = document.querySelectorAll('.number[data-number]');
+    counters.forEach(counter => {
+        const targetAttr = counter.getAttribute('data-number');
+        const target = parseFloat(targetAttr.replace(',', '.'));
+        if (isNaN(target)) return;
 
-    animElements.forEach(element => {
-        // Skip elements with ignore class
-        if (element.classList.contains('prim-ignore-anim')) return;
+        counter.innerText = "0";
 
-        // Set initial state
-        gsap.set(element, {
-            opacity: 0,
-            scale: 0.88,
-            y: 30,
-            transformOrigin: "center center"
-        });
-
-        // Create the scroll-bound animation
-        gsap.to(element, {
+        const startValue = { val: 0 };
+        gsap.to(startValue, {
+            val: target,
+            duration: 2.5,
+            ease: "power2.out",
             scrollTrigger: {
-                trigger: element,
-                start: "top 90%", // Start when top of element hits 90% of viewport
-                end: "top 60%",   // Full opacity/scale by secondary point
-                scrub: 1,         // Smoothly tie animation to scroll (1sec catch up)
-                toggleActions: "play none none reverse"
-            },
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            duration: 1.5,
-            ease: "power2.out"
-        });
-    });
-
-    // 2. Card Entrance (Staggered)
-    // Target columns or boxes inside services/features
-    const cardContainers = document.querySelectorAll('.guten-column, .guten-icon-box-wrapper');
-
-    // We want to animate the inner box of cards
-    const cards = document.querySelectorAll('.prim-glass-card, .guten-icon-box-wrapper');
-
-    cards.forEach(card => {
-        gsap.set(card, {
-            opacity: 0,
-            y: 50
-        });
-
-        gsap.to(card, {
-            scrollTrigger: {
-                trigger: card,
+                trigger: counter,
                 start: "top 95%",
-                end: "top 80%",
-                scrub: 1,
-                toggleActions: "play none none reverse"
+                once: true
             },
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power1.out"
+            onUpdate: function() {
+                if (target % 1 !== 0) {
+                    counter.innerText = startValue.val.toFixed(1);
+                } else {
+                    counter.innerText = Math.floor(startValue.val);
+                }
+            }
         });
     });
 
-    // 3. Special Hero Animation (Immediate or faster scroll)
-    const heroTitle = document.querySelector('.guten-hero-section h1, .guten-pCnxvl'); // .guten-pCnxvl is the 'About' but maybe hero has similar
-    if (heroTitle) {
-        gsap.to(heroTitle, {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            duration: 1.2,
-            ease: "expo.out",
-            delay: 0.3
-        });
-    }
+    // Ensure ScrollTrigger accurately maps the layout
+    ScrollTrigger.refresh();
 }
+
+
+
+
