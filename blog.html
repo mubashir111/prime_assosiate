@@ -1403,20 +1403,21 @@
 		}
 	</style>
 	<style id="custom-prim-glass-nav">
-		/* Navbar Ultra Clean Corporate */
+		/* Navbar Redesign - Pro Upgrade */
 		.prim-glass-nav {
 			background: rgba(255, 255, 255, 0.92) !important;
-			backdrop-filter: blur(16px) !important;
-			-webkit-backdrop-filter: blur(16px) !important;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02) !important;
+			backdrop-filter: blur(12px) !important;
+			-webkit-backdrop-filter: blur(12px) !important;
+			border-bottom: 1px solid rgba(45, 62, 80, 0.04) !important;
+			box-shadow: 0 8px 32px 0 rgba(19, 89, 137, 0.04) !important;
 			transition: all 0.3s ease !important;
 		}
 
 		.prim-glass-nav .gutenverse-menu>li>a {
-			color: #4a5568 !important;
+			color: #2d3e50 !important;
 			font-weight: 500 !important;
-			transition: color 0.15s ease-in-out !important;
+			position: relative;
+			transition: color 0.3s ease !important;
 		}
 
 		.prim-glass-nav .gutenverse-menu>li>a:hover,
@@ -1424,31 +1425,54 @@
 			color: #135989 !important;
 		}
 
+		.prim-glass-nav .gutenverse-menu>li>a::after {
+			content: '';
+			position: absolute;
+			width: 0%;
+			height: 2px;
+			bottom: -4px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #135989;
+			transition: width 0.3s ease;
+			border-radius: 2px;
+			opacity: 0.8;
+		}
+
+		.prim-glass-nav .gutenverse-menu>li>a:hover::after,
+		.prim-glass-nav .gutenverse-menu>li.current-menu-item>a::after {
+			width: 80% !important;
+		}
+
 		.prim-glass-nav .guten-b01p9O .guten-button {
 			background-color: #135989 !important;
 			color: #ffffff !important;
-			border-radius: 4px !important;
-			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
-			font-weight: 500 !important;
-			letter-spacing: 0.025em !important;
-			transition: all 0.2s ease-in-out !important;
+			border-radius: 8px !important;
+			box-shadow: 0 4px 12px rgba(19, 89, 137, 0.3) !important;
+			font-weight: 600 !important;
+			transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 			border: 1px solid transparent !important;
 		}
 
 		.prim-glass-nav .guten-b01p9O .guten-button:hover {
-			transform: translateY(-1px) !important;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-			background-color: #0e4468 !important;
-		}
-
-		.prim-glass-nav .guten-b01p9O .guten-button span,
-		.prim-glass-nav .guten-b01p9O .guten-button i {
-			color: #ffffff !important;
+			transform: translateY(-2px) !important;
+			box-shadow: 0 6px 16px rgba(45, 62, 80, 0.1) !important;
+			background-color: #ffffff !important;
+			color: #135989 !important;
+			border-color: rgba(19, 89, 137, 0.1) !important;
 		}
 
 		.prim-glass-nav .guten-b01p9O .guten-button:hover span,
 		.prim-glass-nav .guten-b01p9O .guten-button:hover i {
-			color: #ffffff !important;
+			color: #135989 !important;
+		}
+
+		/* Hide double arrows and plugin chevron next to Services */
+		.prim-glass-nav .gutenverse-menu li.menu-item-has-children > a i {
+			display: none !important;
+		}
+		.prim-glass-nav .gutenverse-menu li.menu-item-has-children > a::after {
+			display: none !important;
 		}
 	</style>
 </head>
@@ -1509,19 +1533,34 @@
 																																				<li id="menu-item-62"
 													class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-has-children menu-item-62">
 													<a href="services.html">Services</a>
-													<ul class="sub-menu">
-														<li><a href="services.html#audit">Audit and Assurance</a></li>
-														<li><a href="services.html#tax">Tax and Regulatory</a></li>
-														<li><a href="services.html#law">Corporate Law Services</a></li>
-														<li><a href="services.html#outsourcing">Accounting Outsourcing</a></li>
-														<li><a href="services.html#corp-finance">Corporate Finance</a></li>
-														<li><a href="services.html#cfo">Outsourced CFO</a></li>
-														<li><a href="services.html#ipo">SME IPO Advisory</a></li>
-														<li><a href="services.html#sports">Sports Finance</a></li>
-														<li><a href="services.html#govt">Government Advisory</a></li>
-														<li><a href="services.html#deal">Deal Advisory</a></li>
-														<li><a href="services.html#wealth">Wealth Management</a></li>
-														<li><a href="services.html#private-equity">Private Equity</a></li>
+													<ul class="sub-menu mega-menu">
+														<li class="mega-column">
+															<span class="mega-title">Core Accounting & Tax</span>
+															<ul>
+																<li><a href="audit-assurance.html">Audit & Assurance</a></li>
+																<li><a href="tax-regulatory.html">Tax & Regulatory</a></li>
+																<li><a href="accounting-outsourcing.html">Accounting Outsourcing</a></li>
+																<li><a href="wealth-management.html">Wealth Management</a></li>
+															</ul>
+														</li>
+														<li class="mega-column">
+															<span class="mega-title">Corporate & Deal Advisory</span>
+															<ul>
+																<li><a href="corporate-law.html">Corporate Law Services</a></li>
+																<li><a href="corporate-finance.html">Corporate Finance</a></li>
+																<li><a href="outsourced-cfo.html">Outsourced CFO Services</a></li>
+																<li><a href="deal-advisory.html">Deal Advisory</a></li>
+															</ul>
+														</li>
+														<li class="mega-column">
+															<span class="mega-title">Specialized Finance</span>
+															<ul>
+																<li><a href="sme-ipo.html">SME IPO Advisory</a></li>
+																<li><a href="sports-finance.html">Sports Finance</a></li>
+																<li><a href="government-advisory.html">Government Advisory</a></li>
+																<li><a href="private-equity.html">Private Equity</a></li>
+															</ul>
+														</li>
 													</ul>
 												</li>
 												<li id="menu-item-68"
@@ -1619,7 +1658,7 @@
 											<div class="guten-posts guten-ajax-flag">
 												<article
 													class="guten-post post-324 post type-post status-publish format-standard has-post-thumbnail hentry category-strategy tag-accounting tag-budgeting tag-guide">
-													<div class="guten-thumb"><a href="index.html%3Fp=324.html">
+													<div class="guten-thumb"><a href="essential-budgeting-strategies.html">
 															<div class="thumbnail-container ">
 																<img loading="eager" width="1920" height="1080"
 																	src="wp-content/uploads/sites/101/2025/05/acctop-post-7.jpg"
@@ -1636,7 +1675,7 @@
 																	href="category/strategy/index.html"
 																	class="category-strategy">Strategy</a></span></div>
 														<h3 class="guten-post-title">
-															<a href="index.html%3Fp=324.html">Essential Budgeting
+															<a href="essential-budgeting-strategies.html">Essential Budgeting
 																Strategies Every Small Business Should Know</a>
 														</h3>
 														<div class="guten-post-excerpt">
@@ -1650,7 +1689,7 @@
 												</article>
 												<article
 													class="guten-post post-328 post type-post status-publish format-standard has-post-thumbnail hentry category-tips tag-finance tag-guide">
-													<div class="guten-thumb"><a href="index.html%3Fp=328.html">
+													<div class="guten-thumb"><a href="reading-financial-statements.html">
 															<div class="thumbnail-container ">
 																<img loading="eager" width="1920" height="1080"
 																	src="wp-content/uploads/sites/101/2025/05/acctop-post-6.jpg"
@@ -1667,7 +1706,7 @@
 																	href="category/tips/index.html"
 																	class="category-tips">Tips</a></span></div>
 														<h3 class="guten-post-title">
-															<a href="index.html%3Fp=328.html">A Beginner’s Guide to
+															<a href="reading-financial-statements.html">A Beginner’s Guide to
 																Reading and Understanding Financial Statements</a>
 														</h3>
 														<div class="guten-post-excerpt">
@@ -1681,7 +1720,7 @@
 												</article>
 												<article
 													class="guten-post post-327 post type-post status-publish format-standard has-post-thumbnail hentry category-insight tag-accounting tag-mistakes">
-													<div class="guten-thumb"><a href="index.html%3Fp=327.html">
+													<div class="guten-thumb"><a href="common-accounting-mistakes.html">
 															<div class="thumbnail-container ">
 																<img loading="eager" width="1920" height="1080"
 																	src="wp-content/uploads/sites/101/2025/05/acctop-post-5.jpg"
@@ -1698,7 +1737,7 @@
 																	href="category/insight/index.html"
 																	class="category-insight">Insight</a></span></div>
 														<h3 class="guten-post-title">
-															<a href="index.html%3Fp=327.html">The Most Common Accounting
+															<a href="common-accounting-mistakes.html">The Most Common Accounting
 																Mistakes and How to Avoid Them</a>
 														</h3>
 														<div class="guten-post-excerpt">
@@ -1775,7 +1814,7 @@
 												<div class="guten-block-container">
 													<div class="guten-posts guten-ajax-flag">
 														<article class="guten-post post-list-item">
-															<a href="index.html%3Fp=324.html">
+															<a href="essential-budgeting-strategies.html">
 
 																<div class="guten-postlist-content"><span
 																		class="guten-postlist-title">Essential Budgeting
@@ -1791,7 +1830,7 @@
 															</a>
 														</article>
 														<article class="guten-post post-list-item">
-															<a href="index.html%3Fp=328.html">
+															<a href="reading-financial-statements.html">
 
 																<div class="guten-postlist-content"><span
 																		class="guten-postlist-title">A Beginner’s Guide
@@ -1807,7 +1846,7 @@
 															</a>
 														</article>
 														<article class="guten-post post-list-item">
-															<a href="index.html%3Fp=327.html">
+															<a href="common-accounting-mistakes.html">
 
 																<div class="guten-postlist-content"><span
 																		class="guten-postlist-title">The Most Common
