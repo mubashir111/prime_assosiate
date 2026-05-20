@@ -1333,3 +1333,81 @@ body section {
     box-shadow: 0 4px 10px rgba(19, 89, 137, 0.15) !important;
 }
 
+/* ==========================================================================
+   Global Feature List / Process Section Premium Overrides (Clarity & Opaque Stacking)
+   ========================================================================== */
+.guten-feature-list .feature-list-wrapper .feature-list-item .icon {
+    background: #ffffff !important;
+    border-color: rgba(19, 89, 137, 0.2) !important;
+    position: relative !important;
+    z-index: 2 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.guten-feature-list .feature-list-wrapper .feature-list-item:hover .icon {
+    background: #f0f6fa !important;
+    border-color: #135989 !important;
+    transform: scale(1.08) !important;
+    box-shadow: 0 4px 12px rgba(19, 89, 137, 0.12) !important;
+}
+
+/* Ensure checkmarks and standard icons inside feature lists use brand blue instead of template orange */
+.guten-feature-list .feature-list-wrapper .feature-list-item .icon i {
+    color: #135989 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.guten-feature-list .feature-list-wrapper .feature-list-item:hover .icon i {
+    color: #135989 !important;
+}
+
+/* Global filter to turn orange/peach template list numbers to corporate blue */
+.guten-feature-list .feature-list-wrapper .feature-list-item .icon img {
+    filter: hue-rotate(175deg) brightness(0.8) saturate(1.2) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Blog Page Hero Column Alignment Override */
+.page-id-59 .guten-section>.guten-container>.guten-S3WLcf.guten-column>.sticky-wrapper>.guten-column-wrapper,
+.page-id-59 .guten-section>.guten-container>.guten-S3WLcf.guten-column>.guten-column-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-content: flex-end !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+}
+
+.page-id-59 .guten-slCedE.guten-icon-box .guten-icon-box-wrapper {
+    padding: 9px 0 0 9px !important;
+    border-style: none !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    justify-content: flex-end !important;
+}
+
+.page-id-59 .guten-element.guten-slCedE {
+    margin: 0 0 24px 0 !important;
+    width: 100% !important;
+}
+
+.page-id-59 .guten-4uJj6d {
+    width: 100% !important;
+    max-width: 349px !important;
+    display: block !important;
+    float: none !important;
+    margin-left: auto !important;
+}
+
+.page-id-59 .guten-element.guten-4uJj6d {
+    margin: 0 0 0 auto !important;
+    padding: 0 !important;
+}
+
+.page-id-59 .guten-4uJj6d p {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: right !important;
+}
+
