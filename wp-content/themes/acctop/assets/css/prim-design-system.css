@@ -135,7 +135,7 @@ img {
 /* Left column reduced padding for balance */
 .guten-nI3VFK>.sticky-wrapper>.guten-column-wrapper,
 .guten-nI3VFK>.guten-column-wrapper {
-    padding-right: 40px !important;
+    padding-right: 40px;
 }
 
 /* Heading - bolder & larger */
@@ -377,28 +377,30 @@ img {
         overflow-x: hidden !important;
     }
 
-    /* Force hero buttons into one row with refined spacing and sizing */
+    /* Force hero buttons into vertical stack with elegant spacing */
     .guten-s0sRgO.flex,
     .guten-element.guten-s0sRgO {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        /* Prevent wrapping */
-        gap: 16px !important;
-        /* Gap as primary spacing */
-        justify-content: flex-start !important;
+        display: block !important;
         width: 100% !important;
         margin-top: 24px !important;
     }
 
+    .guten-s0sRgO .guten-inner-wrap {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
     .guten-element.guten-N0hslg {
-        margin-right: 16px !important;
-        /* Fallback/explicit spacing for first button */
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
     }
 
     .guten-element.guten-N0hslg,
     .guten-element.guten-9Ma3AF {
-        width: auto !important;
+        width: fit-content !important;
         flex: 0 1 auto !important;
         padding: 0 !important;
         margin-top: 0 !important;
@@ -995,6 +997,7 @@ body section {
         padding-left: 24px !important;
         padding-right: 24px !important;
     }
+
     .guten-element.guten-WujYsu {
         padding-left: 30px !important;
         padding-right: 30px !important;
@@ -1506,8 +1509,15 @@ body section {
         padding-left: 16px !important;
         padding-right: 16px !important;
     }
+
     html body .guten-element.guten-WujYsu {
         padding-left: 15px !important;
         padding-right: 15px !important;
+    }
+
+    /* Remove padding right on mobile for about column */
+    html body .guten-nI3VFK>.sticky-wrapper>.guten-column-wrapper,
+    html body .guten-nI3VFK>.guten-column-wrapper {
+        padding-right: 0 !important;
     }
 }
