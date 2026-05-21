@@ -133,8 +133,8 @@ img {
 }
 
 /* Left column reduced padding for balance */
-.guten-nI3VFK > .sticky-wrapper > .guten-column-wrapper,
-.guten-nI3VFK > .guten-column-wrapper {
+.guten-nI3VFK>.sticky-wrapper>.guten-column-wrapper,
+.guten-nI3VFK>.guten-column-wrapper {
     padding-right: 40px !important;
 }
 
@@ -146,8 +146,8 @@ img {
 }
 
 /* Icon boxes - premium white cards & equal height layout */
-.guten-k3KW33 > .guten-container,
-.guten-mc48Si > .guten-container {
+.guten-k3KW33>.guten-container,
+.guten-mc48Si>.guten-container {
     display: flex !important;
     align-items: stretch !important;
     flex-wrap: wrap !important;
@@ -920,7 +920,7 @@ body section {
         border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .gutenverse-menu li.menu-item-has-children:hover > .sub-menu {
+    .gutenverse-menu li.menu-item-has-children:hover>.sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -954,7 +954,7 @@ body section {
     }
 
     /* Chevron Indicator */
-    .gutenverse-menu li.menu-item-has-children > a::after {
+    .gutenverse-menu li.menu-item-has-children>a::after {
         content: '\f078';
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
@@ -966,11 +966,11 @@ body section {
     }
 
     /* Hide default plugin indicator to prevent double arrows */
-    .gutenverse-menu li.menu-item-has-children > a i {
+    .gutenverse-menu li.menu-item-has-children>a i {
         display: none !important;
     }
 
-    .gutenverse-menu li.menu-item-has-children:hover > a::after {
+    .gutenverse-menu li.menu-item-has-children:hover>a::after {
         transform: rotate(180deg);
         color: #135989;
         opacity: 1;
@@ -983,10 +983,21 @@ body section {
         padding-left: 20px !important;
         list-style: none !important;
     }
+
     .gutenverse-menu .sub-menu li a {
         font-size: 16px !important;
         padding: 10px 0 !important;
         opacity: 0.8;
+    }
+
+    /* Responsive Horizontal Padding Overrides for Tablet */
+    .guten-element.guten-hdaRTv {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+    .guten-element.guten-WujYsu {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
     }
 }
 
@@ -1010,26 +1021,27 @@ body section {
 }
 
 /* Bulletproof CSS Entrance Animations */
-.guten-section h1, 
-.guten-section h2, 
-.guten-section h3, 
-.guten-section h4, 
-.guten-section p, 
-.guten-section .guten-button, 
-.guten-section a:not(.guten-image-wrapper), 
-.prim-glass-card, 
+.guten-section h1,
+.guten-section h2,
+.guten-section h3,
+.guten-section h4,
+.guten-section p,
+.guten-section .guten-button,
+.guten-section a:not(.guten-image-wrapper),
+.prim-glass-card,
 .guten-icon-box-wrapper {
     animation: primSafeFadeInUp 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 @keyframes primSafeFadeInUp {
-    0% { 
-        opacity: 0; 
-        transform: translateY(30px); 
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    100% { 
-        opacity: 1; 
-        transform: translateY(0); 
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -1050,7 +1062,8 @@ body section {
     align-items: center !important;
     margin: 0 !important;
     flex-shrink: 0 !important;
-    height: 22px !important; /* matches font line height */
+    height: 22px !important;
+    /* matches font line height */
 }
 
 .guten-gdpr-wrapper .gdpr-label {
@@ -1081,6 +1094,7 @@ body section {
 
 /* 1. Desktop Mega Menu Layout */
 @media screen and (min-width: 1025px) {
+
     /* Main container of the Services dropdown */
     .gutenverse-menu li.menu-item-has-children .sub-menu.mega-menu {
         left: 50% !important;
@@ -1101,7 +1115,7 @@ body section {
         box-sizing: border-box !important;
     }
 
-    .gutenverse-menu li.menu-item-has-children:hover > .sub-menu.mega-menu {
+    .gutenverse-menu li.menu-item-has-children:hover>.sub-menu.mega-menu {
         opacity: 1 !important;
         visibility: visible !important;
         transform: translateX(-50%) translateY(0) !important;
@@ -1215,7 +1229,7 @@ body section {
         opacity: 0.85 !important;
         text-decoration: none !important;
     }
-    
+
     .mega-column ul li a:hover {
         color: #135989 !important;
         opacity: 1 !important;
@@ -1267,11 +1281,11 @@ body section {
     display: block;
     opacity: 1;
     transform: scale(1) translateY(0);
-    transition: 
-        display 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-        opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-        transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-        background 0.3s ease, 
+    transition:
+        display 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        background 0.3s ease,
         box-shadow 0.3s ease !important;
     transition-behavior: allow-discrete !important;
 }
@@ -1325,7 +1339,7 @@ body section {
     font-weight: 500 !important;
 }
 
-.sidebar-category .service-list li a:hover, 
+.sidebar-category .service-list li a:hover,
 .sidebar-category .service-list li a.active {
     background: #135989 !important;
     color: #ffffff !important;
@@ -1411,3 +1425,89 @@ body section {
     text-align: right !important;
 }
 
+
+.cta-box {
+    padding: 30px 16px !important;
+}
+
+.sidebar-widget {
+    padding: 20px 15px !important;
+}
+}
+
+/* ==========================================================================
+   Mobile Heading & Layout Full Width Enhancements
+   ========================================================================== */
+@media (max-width: 767px) {
+
+    /* Force gutenverse container to wrap columns properly */
+    html body .guten-container {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Force columns to occupy full width and stack vertically, except hidden ones */
+    html body .guten-column:not(.hide-mobile):not(.hide-tablet),
+    html body .wp-block-gutenverse-column:not(.hide-mobile):not(.hide-tablet),
+    html body .guten-column-wrapper:not(.hide-mobile):not(.hide-tablet),
+    html body .guten-64XdAQ:not(.hide-mobile):not(.hide-tablet),
+    html body .guten-AppQ5s:not(.hide-mobile):not(.hide-tablet) {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        display: block !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Re-enforce hide-mobile and hide-tablet classes to override display block stacking */
+    html body .hide-mobile,
+    html body .hide-tablet,
+    html body .guten-column.hide-mobile,
+    html body .guten-column.hide-tablet,
+    html body .wp-block-gutenverse-column.hide-mobile,
+    html body .wp-block-gutenverse-column.hide-tablet {
+        display: none !important;
+    }
+
+    /* Ensure all headings take full available width without truncation */
+    html body h1.wp-block-gutenverse-heading,
+    html body h2.wp-block-gutenverse-heading,
+    html body h3.wp-block-gutenverse-heading,
+    html body .wp-block-gutenverse-heading,
+    html body .guten-element.guten-rGRZae,
+    html body .guten-element.guten-jYTq4b {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+        font-size: clamp(32px, 8.5vw, 42px) !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Ensure text editors / paragraph containers also take full width */
+    html body .guten-lV44Fo,
+    html body .gutenverse-text-editor {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+
+    /* Responsive Horizontal Padding Overrides for Mobile */
+    html body .guten-element.guten-hdaRTv {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+    html body .guten-element.guten-WujYsu {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}

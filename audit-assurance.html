@@ -334,6 +334,36 @@
 		</div>
 	</div>
     <script src="wp-content/plugins/gutenverse/assets/js/frontend/nav-menu.js"></script>
+    <script>
+        // Smooth responsive menu behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            var hamburger = document.querySelector('.gutenverse-hamburger-menu');
+            var closeBtn = document.querySelector('.gutenverse-close-menu');
+            var menuWrapper = document.querySelector('.gutenverse-menu-wrapper');
+            var overlay = document.querySelector('.guten-nav-overlay');
+
+            if (hamburger && menuWrapper && overlay) {
+                hamburger.addEventListener('click', function() {
+                    menuWrapper.classList.add('active');
+                    overlay.classList.add('active');
+                });
+            }
+
+            if (closeBtn && menuWrapper && overlay) {
+                closeBtn.addEventListener('click', function() {
+                    menuWrapper.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            }
+
+            if (overlay && menuWrapper) {
+                overlay.addEventListener('click', function() {
+                    menuWrapper.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            }
+        });
+    </script>
 
 
 			<div class="section-wrapper" data-id="footer-main" style="background-color: #041520 !important; width: 100% !important; display: block !important; clear: both !important; margin-top: 100px;">
