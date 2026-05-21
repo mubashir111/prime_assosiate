@@ -8,7 +8,8 @@
 :root {
     /* Color Palette - New Light Theme */
     --prim-bg-cream: #f8f6f2;
-    --prim-accent-gold: #135989;
+    --prim-primary: #0f4b6b; /* deeper navy for stronger brand presence */
+    --prim-accent-gold: #135989; /* existing accent (kept for compatibility) */
     --prim-accent-gold-rgb: 19, 89, 137;
     --prim-dark-slate: #2d3e50;
     --prim-text-muted: #6e7175;
@@ -16,6 +17,12 @@
     --prim-white: #FFFFFF;
     --prim-glass-bg: rgba(255, 255, 255, 0.7);
     --prim-glass-border: rgba(0, 0, 0, 0.05);
+
+    /* Typography scale */
+    --prim-h1: 64px;
+    --prim-h2: 40px;
+    --prim-h3: 24px;
+    --prim-body: 17px;
 
     /* Typography */
     --prim-font-body: 'Inter', sans-serif;
@@ -140,9 +147,41 @@ img {
 
 /* Heading - bolder & larger */
 .guten-pCnxvl {
-    font-size: 50px !important;
-    line-height: 1.1 !important;
+    font-size: var(--prim-h1) !important;
+    line-height: 1.05 !important;
     letter-spacing: -0.02em !important;
+    font-weight: 700 !important;
+}
+
+/* Hero specific scale and subheading */
+.guten-U9CNeU .guten-jYTq4b,
+.guten-U9CNeU .guten-pCnxvl,
+.guten-U9CNeU h1 {
+    font-size: var(--prim-h1) !important;
+    line-height: 1.03 !important;
+    color: var(--prim-dark-slate) !important;
+}
+
+.guten-U9CNeU p,
+.guten-U9CNeU .hero-subhead {
+    font-size: var(--prim-body) !important;
+    color: var(--prim-text-muted) !important;
+    margin-top: 18px !important;
+    max-width: 680px !important;
+}
+
+/* CTA trust stats (utility) shown beneath hero CTAs */
+.prim-trust-row {
+    display: flex !important;
+    gap: 20px !important;
+    align-items: center !important;
+    margin-top: 18px !important;
+}
+.prim-trust-row .prim-trust-item {
+    background: transparent !important;
+    color: var(--prim-dark-slate) !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
 }
 
 /* Icon boxes - premium white cards & equal height layout */
@@ -736,8 +775,8 @@ body section {
 .guten-aXfuVV:hover,
 .guten-IfQgPd:hover {
     border: 1px solid var(--prim-accent-gold) !important;
-    transform: translateY(-5px) !important;
-    box-shadow: 0 15px 35px rgba(19, 89, 137, 0.2) !important;
+    transform: translateY(-8px) !important;
+    box-shadow: 0 22px 48px rgba(19, 89, 137, 0.18) !important;
 }
 
 /* Icon Gradients - Uniform Dark Palette */
