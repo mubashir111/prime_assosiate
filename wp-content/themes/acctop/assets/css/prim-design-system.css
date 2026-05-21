@@ -306,11 +306,11 @@ img {
     align-items: center !important;
     justify-content: center !important;
     height: 48px !important;
-    padding: 0 28px !important;
+    padding: 0 22px !important;
     font-size: 15px !important;
     font-weight: 600 !important;
     letter-spacing: 0.01em !important;
-    border-radius: 8px !important;
+    border-radius: 999px !important; /* pill */
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
     text-decoration: none !important;
     white-space: nowrap !important;
@@ -342,6 +342,9 @@ img {
     color: #135989 !important;
     border: 2px solid #135989 !important;
     box-shadow: none !important;
+    height: 48px !important;
+    padding: 0 20px !important;
+    border-radius: 999px !important; /* outline pill */
 }
 
 .guten-fYnby1 .guten-button:hover,
@@ -681,6 +684,42 @@ body section {
     border-bottom: none !important;
 }
 
+/* Nav alignment: vertically center Book A Call button column */
+.prim-glass-nav .hide-tablet.hide-mobile .guten-column-wrapper,
+.prim-glass-nav .guten-b01p9O {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    margin: 0 !important;
+}
+
+.prim-glass-nav .guten-b01p9O .guten-button {
+    margin: 0 !important;
+    vertical-align: middle !important;
+}
+
+/* Stronger override: target the nav column wrapper used in templates to ensure true vertical centering.
+   This is intentionally specific to override page-level inline styles. */
+.prim-glass-nav .guten-container .wp-block-gutenverse-column.hide-tablet.hide-mobile,
+.prim-glass-nav .guten-container .wp-block-gutenverse-column.hide-tablet.hide-mobile .guten-column-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important; /* keep button to the right */
+    min-height: 60px !important;
+    padding: 0 !important;
+}
+
+.prim-glass-nav .guten-container .wp-block-gutenverse-column.hide-tablet.hide-mobile .guten-element.guten-button-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.prim-glass-nav .guten-container .guten-b01p9O .guten-button {
+    margin: 0 !important;
+    transform: none !important;
+}
+
 /* Service Boxes & Informational Cards */
 .guten-6pYJEa,
 .guten-aXfuVV,
@@ -718,16 +757,19 @@ body section {
 .guten-button {
     background-color: var(--prim-accent-gold) !important;
     color: #ffffff !important;
-    padding: 12px 28px !important;
-    font-size: 14px !important;
+    height: 48px !important;
+    padding: 0 22px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
     border: none !important;
-    border-radius: 6px !important;
+    border-radius: 999px !important; /* pill default for nav/buttons without more specific overrides */
     transition: var(--prim-transition) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     text-decoration: none !important;
+    box-shadow: 0 6px 18px rgba(var(--prim-accent-gold-rgb), 0.12) !important;
 }
 
 .guten-button i,
@@ -735,14 +777,26 @@ body section {
     color: inherit !important;
 }
 
-.guten-button:hover {
-    background-color: var(--prim-dark-slate) !important;
+.guten-button:hover,
+.guten-button:focus {
+    background-color: rgba(var(--prim-accent-gold-rgb), 0.95) !important;
     color: var(--prim-white) !important;
-    transform: translateY(-2px) scale(1.02) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 30px rgba(var(--prim-accent-gold-rgb), 0.22) !important;
 }
 
-.guten-button:hover i,
-.guten-button:hover span {
+/* Nav-specific primary button (ensures Book A Call and similar nav buttons look pill-shaped and prominent) */
+.prim-glass-nav .guten-b01p9O .guten-button,
+.prim-glass-nav .guten-b01p9O .guten-button i {
+    padding: 0 20px !important;
+    border-radius: 999px !important;
+    font-size: 14px !important;
+    box-shadow: 0 8px 24px rgba(var(--prim-accent-gold-rgb), 0.18) !important;
+}
+
+/* Keep icons/text inheriting color on hover in nav */
+.prim-glass-nav .guten-b01p9O .guten-button:hover i,
+.prim-glass-nav .guten-b01p9O .guten-button:hover span {
     color: inherit !important;
 }
 
