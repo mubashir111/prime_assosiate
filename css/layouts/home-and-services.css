@@ -332,9 +332,9 @@ section.guten-element.guten-2VyYGc>.guten-container>.guten-column>.guten-column-
         width: 280px;
     }
 
-    
 
-    
+
+
 
     #guten-RgkjUx.guten-nav-menu .gutenverse-menu-wrapper .gutenverse-nav-identity-panel .gutenverse-close-menu {
         width: 18px;
@@ -469,7 +469,7 @@ section.guten-element.guten-2VyYGc>.guten-container>.guten-column>.guten-column-
     }
 
     .guten-element.guten-U9CNeU {
-        padding-top: 144px;
+        padding-top: 90px;
         padding-right: 16px;
         padding-bottom: 0px;
         padding-left: 16px;
@@ -4514,7 +4514,7 @@ h6.guten-element.guten-pbvKwI {
 
 @media only screen and (max-width: 767px) {
     .guten-364SkK.guten-element {
-        width: 1100% !important;
+        width: 100% !important;
     }
 }
 
@@ -8986,20 +8986,27 @@ h6.guten-element.guten-3ARiiE {
 
 /* Custom responsive overrides for metrics cards to prevent awkward text wrapping on mobile */
 @media only screen and (max-width: 767px) {
+
     /* Accuracy Report card container */
     .guten-eDlaH8.guten-element {
-        width: 250px !important; /* Increase width from 200px to 250px */
+        width: 250px !important;
+        /* Increase width from 200px to 250px */
     }
+
     .guten-eDlaH8 {
-        padding: 16px 16px 20px 16px !important; /* Reduce side padding from 24px to 16px to maximize content width */
+        padding: 16px 16px 20px 16px !important;
+        /* Reduce side padding from 24px to 16px to maximize content width */
     }
-    
+
     /* Satisfaction card container */
     .guten-yJODDi.guten-element {
-        width: 230px !important; /* Increase width from 170px to 230px */
+        width: 230px !important;
+        /* Increase width from 170px to 230px */
     }
+
     .guten-yJODDi {
-        padding: 16px 16px 20px 16px !important; /* Reduce side padding from 24px to 16px to maximize content width */
+        padding: 16px 16px 20px 16px !important;
+        /* Reduce side padding from 24px to 16px to maximize content width */
     }
 
     /* Prevent text hyphenation / wrapping of key metrics heading text */
@@ -9018,6 +9025,7 @@ h6.guten-element.guten-3ARiiE {
         white-space: nowrap !important;
         overflow-wrap: normal !important;
         word-break: normal !important;
-        font-size: 16px !important; /* Ensure the text fits and is beautifully proportioned */
+        font-size: 16px !important;
+        /* Ensure the text fits and is beautifully proportioned */
     }
 }

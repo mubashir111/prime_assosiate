@@ -877,5 +877,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="js/nav-menu.js"></script>
 <script src="js/prim-animations.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionHeadings = document.querySelectorAll('.accordion-heading');
+    accordionHeadings.forEach(heading => {
+        heading.addEventListener('click', function() {
+            const item = this.closest('.accordion-item');
+            if (item) {
+                // Toggle active class on the clicked item
+                item.classList.toggle('active');
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>

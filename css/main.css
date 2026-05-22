@@ -14477,6 +14477,11 @@ body section {
     .services-filter-tabs {
         gap: 8px;
         margin-bottom: 30px;
+        justify-content: flex-start;
+    }
+    
+    .service-card {
+        padding: 24px !important;
     }
     
     .services-filter-tabs .filter-tab {
@@ -14487,3 +14492,61 @@ body section {
 
 
 
+
+/* Fix gap between number and percentage */
+.number-wrapper .super, 
+.guten-fun-fact .super {
+    margin-left: 6px !important;
+}
+
+/* Hide the background images for Accuracy & Satisfaction cards on mobile & tablet */
+@media only screen and (max-width: 1024px) {
+    .guten-iff9mq, .guten-FbYFzN {
+        background-image: none !important;
+        height: auto !important;
+        min-height: 0 !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: transparent !important;
+    }
+    
+    /* Ensure the inner cards take full width without weird offsets and don't stretch vertically */
+    .guten-iff9mq .guten-eDlaH8, 
+    .guten-FbYFzN .guten-yJODDi {
+        margin: 0 0 20px 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-width: 100% !important;
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        transform: none !important;
+    }
+}
+
+
+/* Fix narrow text wrapping on overlapping cards in About Page */
+.guten-PzfWnw.guten-element, 
+.guten-5B9xgH.guten-element {
+    width: max-content !important;
+    min-width: 220px !important;
+    max-width: 300px !important;
+}
+
+h6.guten-1lFwqp, 
+h6.guten-5Zwkx9 {
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: nowrap !important;
+}
+
+/* Fix accordion body not displaying when active */
+.guten-accordions .accordion-item.active .accordion-body {
+    height: auto !important;
+    overflow: visible !important;
+    padding-bottom: 15px; /* Add some spacing at the bottom */
+}
