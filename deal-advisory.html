@@ -1,334 +1,192 @@
 <!DOCTYPE html>
+
 <html lang="en-US">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="PRIM & Associates - Deal Advisory. Strategic support for mergers, acquisitions, and business divestitures.">
-	<title>Deal Advisory | PRIM & Associates</title>
-	<link rel='stylesheet' id='acctop-style-css' href='wp-content/themes/acctop/style.css' media='all' />
-	<link rel='stylesheet' id='custom-styling-css' href='wp-content/themes/acctop/assets/css/custom-styling.css' media='all' />
-	<link rel='stylesheet' id='prim-design-system-css' href='wp-content/themes/acctop/assets/css/prim-design-system.css' media='all' />
-    <style>
-        .service-page-wrapper { padding: 80px 0; background-color: #fff; }
-        .service-container { display: flex; gap: 40px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .service-sidebar { flex: 1; min-width: 300px; }
-        .service-content { flex: 2.5; }
-        .sidebar-widget { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        .sidebar-title { font-size: 20px; font-weight: 700; color: #135989; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid #f0f4f8; }
-        .service-list { list-style: none; padding: 0; margin: 0; }
-        .service-list li { margin-bottom: 12px; }
-        .service-list a { display: block; padding: 12px 20px; background: #f8fafd; color: #333; text-decoration: none; border-radius: 5px; transition: all 0.3s ease; font-weight: 500; }
-        .service-list a:hover, .service-list a.active { background: #135989; color: white; padding-left: 25px; }
-        .content-card { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .service-title { font-size: 36px; font-weight: 800; color: #135989; margin-bottom: 20px; }
-        .service-desc { font-size: 17px; line-height: 1.8; color: #555; margin-bottom: 30px; }
-        .feature-box { margin-top: 40px; }
-        .feature-title { font-size: 24px; font-weight: 700; color: #135989; margin-bottom: 20px; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; padding: 20px; background: #f8fafd; border-radius: 8px; transition: transform 0.3s ease; }
-        .feature-item:hover { transform: translateY(-5px); background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .feature-icon { color: #2a76ad; font-size: 20px; margin-top: 5px; }
-        .cta-box { background: linear-gradient(135deg, #135989 0%, #2a76ad 100%); padding: 40px; border-radius: 10px; color: white; text-align: center; margin-top: 40px; }
-        .cta-btn { display: inline-block; padding: 15px 35px; background: white; color: #135989; text-decoration: none; border-radius: 50px; font-weight: 700; margin-top: 20px; transition: all 0.3s ease; }
-        .cta-btn:hover { background: #f0f4f8; transform: scale(1.05); }
-        @media (max-width: 992px) { .service-container { flex-direction: column; } .service-sidebar { order: 2; } .service-content { order: 1; } }
-    </style>
-
-    
-    <!-- Gutenverse Styles for Navigation -->
-    <link rel='stylesheet' id='fontawesome-gutenverse-css'
-		href='wp-content/uploads/sites/101/gutenverse/font-icon/fonts/fontawesome/css/all.min.css%3Fver=2.3.1.css'
-		media='all' />
-    <link rel='stylesheet' id='gutenverse-iconlist-css'
-		href='wp-content/uploads/sites/101/gutenverse/font-icon/fonts/gtnicon/gtnicon.css%3Fver=2.3.1.css'
-		media='all' />
-    <link rel='stylesheet' id='gutenverse-form-frontend-form-input-general-style-css'
-		href='wp-content/plugins/gutenverse-form/assets/css/general-input.css%3Fver=2.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-form-frontend-form-builder-style-css'
-		href='wp-content/plugins/gutenverse-form/assets/css/frontend/form-builder.css%3Fver=2.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-form-frontend-form-input-email-style-css'
-		href='wp-content/plugins/gutenverse-form/assets/css/frontend/form-input-email.css%3Fver=2.3.1.css'
-		media='all' />
-    <link rel='stylesheet' id='gutenverse-form-frontend-form-input-submit-style-css'
-		href='wp-content/plugins/gutenverse-form/assets/css/frontend/form-input-submit.css%3Fver=2.3.1.css'
-		media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-advanced-heading-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/advanced-heading.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-button-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/button.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-divider-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/divider.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-feature-list-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/feature-list.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-fun-fact-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/fun-fact.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-heading-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/heading.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-icon-box-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/icon-box.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-icon-list-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/icon-list.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-icon-list-item-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/icon-list-item.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-image-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/image.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-logo-slider-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/logo-slider.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-nav-menu-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/nav-menu.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-post-block-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/post-block.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-post-content-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/post-content.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-post-list-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/post-list.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-progress-bar-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/progress-bar.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-social-icons-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/social-icons.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-social-icon-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/social-icon.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-testimonials-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/testimonials.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-text-editor-style-css'
-		href='wp-content/plugins/gutenverse/assets/css/frontend/text-editor.css%3Fver=3.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-core-frontend-column-style-css'
-		href='wp-content/plugins/gutenverse/lib/framework/assets/css/frontend/column.css%3Fver=2.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-core-frontend-section-style-css'
-		href='wp-content/plugins/gutenverse/lib/framework/assets/css/frontend/section.css%3Fver=2.3.1.css'
-		media='all' />
-    <link rel='stylesheet' id='gutenverse-core-frontend-wrapper-style-css'
-		href='wp-content/plugins/gutenverse/lib/framework/assets/css/frontend/wrapper.css%3Fver=2.3.1.css'
-		media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-style-css'
-		href='wp-content/plugins/gutenverse/lib/framework/assets/css/frontend.css%3Fver=2.3.1.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-companion-frontend-block-css'
-		href='wp-content/themes/acctop/assets/css/essential/frontend-essential.css%3Fver=2.0.2.css' media='all' />
-    <link rel='stylesheet' id='gutenverse-generated-template-css'
-		href='wp-content/uploads/sites/101/gutenverse/css/gutenverse-template-blank-canvas-535297.css%3Fver=535297.css'
-		media='all' />
-    <link rel='stylesheet' id='gutenverse-generated-content-css'
-		href='wp-content/uploads/sites/101/gutenverse/css/gutenverse-content-35-535297.css%3Fver=535297.css'
-		media='all' />
-    <link rel='stylesheet' id='gutenverse-google-font-css'
-		href='https://fonts.googleapis.com/css?family=Alfa+Slab+One%3A400%2C400italic%2C700%2C700italic%2Cbold%7CDM+Sans%3A400%2C400italic%2C700%2C700italic%2C500&#038;display=swap&#038;ver=2.3.1'
-		media='all' />
-    <link rel='stylesheet' id='gutenverse-frontend-icon-css'
-		href='wp-content/plugins/gutenverse/lib/framework/assets/dist/frontend-icon.css%3Fver=2.3.1.css' media='all' />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PRIM &amp; Associates - Deal Advisory. Strategic support for mergers, acquisitions, and business divestitures." name="description"/>
+<title>Deal Advisory | PRIM &amp; Associates</title>
+<!-- Gutenverse Styles for Navigation -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+<link href="css/main.css" rel="stylesheet"/><link href="css/layouts/home-and-services.css" rel="stylesheet"/>
 </head>
-
 <body class="page-template page-template-gutenverse-full-width">
-	<div class="wp-site-blocks">
-		<div class="guten-XMKGXO entry-content is-layout-constrained guten-post-content guten-element">
-			<div class="section-wrapper" data-id="2VyYGc">
-				<section
-					class="wp-block-gutenverse-section guten-element guten-section guten-2VyYGc layout-fullwidth align-stretch prim-glass-nav"
-					style="position: sticky; top: 0; z-index: 9999;">
-					<div class="guten-container guten-column-gap-no">
-						<div class="wp-block-gutenverse-column guten-element guten-column guten-4WRTsx">
-							<div class="guten-column-wrapper" data-id="4WRTsx">
-								<div class="wp-block-gutenverse-image guten-element guten-image guten-Y7ASQF"><a
-										class="guten-image-wrapper" href="index.html"><img loading="lazy"
-											decoding="async" class="gutenverse-image-box-filled"
-											src="images/Prim_Blue.png" alt="PRIM & Associates Logo" height="85"
-											width="350" /></a></div>
-							</div>
-						</div>
-
-
-
-						<div class="wp-block-gutenverse-column guten-element guten-column guten-zLIHWA">
-							<div class="guten-column-wrapper" data-id="zLIHWA">
-								<div id="guten-RgkjUx"
-									class="guten-element guten-nav-menu nav-menu break-point-tablet submenu-click-title "
-									data-item-indicator="fas fa-chevron-down" data-close-on-click="1">
-									<div class="gutenverse-hamburger-wrapper">
-										<button class="gutenverse-hamburger-menu" aria-label="Open Menu">
-											<i aria-hidden="true" class="fas fa-bars"></i>
-										</button>
-									</div>
-									<div class="guten-nav-overlay"></div>
-									<div class="gutenverse-menu-wrapper">
-										<div class="gutenverse-menu-container">
-											<ul id="menu-acctop-1" class="gutenverse-menu">
-												<li id="menu-item-60"
-													class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-60">
-													<a href="index.html" aria-current="page">Home</a>
-												</li>
-												<li id="menu-item-61"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61">
-													<a href="about.html">About</a>
-												</li>
-												<li id="menu-item-62"
-													class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-has-children menu-item-62">
-													<a href="services.html">Services</a>
-													<ul class="sub-menu mega-menu">
-														<li class="mega-column">
-															<span class="mega-title">Core Accounting & Tax</span>
-															<ul>
-																<li><a href="audit-assurance.html">Audit & Assurance</a></li>
-																<li><a href="tax-regulatory.html">Tax & Regulatory</a></li>
-																<li><a href="accounting-outsourcing.html">Accounting Outsourcing</a></li>
-																<li><a href="wealth-management.html">Wealth Management</a></li>
-															</ul>
-														</li>
-														<li class="mega-column">
-															<span class="mega-title">Corporate & Deal Advisory</span>
-															<ul>
-																<li><a href="corporate-law.html">Corporate Law Services</a></li>
-																<li><a href="corporate-finance.html">Corporate Finance</a></li>
-																<li><a href="outsourced-cfo.html">Outsourced CFO Services</a></li>
-																<li><a href="deal-advisory.html">Deal Advisory</a></li>
-															</ul>
-														</li>
-														<li class="mega-column">
-															<span class="mega-title">Specialized Finance</span>
-															<ul>
-																<li><a href="sme-ipo.html">SME IPO Advisory</a></li>
-																<li><a href="sports-finance.html">Sports Finance</a></li>
-																<li><a href="government-advisory.html">Government Advisory</a></li>
-																<li><a href="private-equity.html">Private Equity</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<li id="menu-item-68"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68">
-													<a href="team.html">Team</a>
-												</li>
-												<li id="menu-item-70"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
-												</li>
-												<li id="menu-item-71"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
-													<a href="contact.html">Contact Us</a>
-												</li>
-												<li id="menu-item-72"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72">
-													<a href="blog.html">Blog</a>
-												</li>
-											</ul>
-										</div>
-										<div>
-											<div class="gutenverse-nav-identity-panel">
-												<div class="gutenverse-nav-site-title">
-													<a href="index.html" class="gutenverse-nav-logo"><img
-															decoding="async" src="images/Prim_Blue.png"
-															alt="PRIM & Associates - Accounting Firm &amp; Company (FSE) WordPress Theme"></a>
-												</div>
-												<button class="gutenverse-close-menu" aria-label="Close Menu"><i
-														aria-hidden="true" class="fas fa-times"></i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-
-						<div
-							class="wp-block-gutenverse-column guten-element guten-column guten-YgaGOg hide-tablet hide-mobile">
-							<div class="guten-column-wrapper" data-id="YgaGOg">
-								<div class="guten-element guten-button-wrapper guten-b01p9O"><a
-										class="guten-button guten-button-sm" href="appointment.html"><i
-											class="fa-lg fas fa-phone"></i><span>Book A Call</span></a></div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-
-            <!-- Page Header -->
-            <div class="section-wrapper" style="background: #135989; padding: 120px 20px 80px; color: white; text-align: center;">
-                <h1 style="font-size: 42px; font-weight: 800; color: #ffffff;">Deal Advisory</h1>
-                <p style="opacity: 0.8; font-size: 18px;">Expert guidance for your most critical business transactions.</p>
-            </div>
-
-            <div class="service-page-wrapper">
-                <div class="service-container">
-                    <aside class="service-sidebar">
-                        <div class="sidebar-widget">
-                            <h4 class="sidebar-title">Our Services</h4>
-                            <div class="sidebar-category">
-                                <div class="sidebar-cat-title">Accounting & Tax</div>
-                                <ul class="service-list">
-                                    <li><a href="audit-assurance.html">Audit & Assurance</a></li>
-                                    <li><a href="tax-regulatory.html">Tax & Regulatory</a></li>
-                                    <li><a href="accounting-outsourcing.html">Accounting Outsourcing</a></li>
-                                    <li><a href="wealth-management.html">Wealth Management</a></li>
-                                </ul>
-                            </div>
-                            <div class="sidebar-category">
-                                <div class="sidebar-cat-title">Corporate & Advisory</div>
-                                <ul class="service-list">
-                                    <li><a href="corporate-law.html">Corporate Law Services</a></li>
-                                    <li><a href="corporate-finance.html">Corporate Finance</a></li>
-                                    <li><a href="outsourced-cfo.html">Outsourced CFO Services</a></li>
-                                    <li><a href="deal-advisory.html" class="active">Deal Advisory</a></li>
-                                </ul>
-                            </div>
-                            <div class="sidebar-category">
-                                <div class="sidebar-cat-title">Specialized Finance</div>
-                                <ul class="service-list">
-                                    <li><a href="sme-ipo.html">SME IPO Advisory</a></li>
-                                    <li><a href="sports-finance.html">Sports Finance</a></li>
-                                    <li><a href="government-advisory.html">Government Advisory</a></li>
-                                    <li><a href="private-equity.html">Private Equity</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="sidebar-widget cta-box">
-                            <h3>Closing the Deal</h3>
-                            <p>Consult with our advisors for strategic merger and acquisition support.</p>
-                            <a href="contact.html" class="cta-btn">Start Discussion</a>
-                        </div>
-                    </aside>
-
-                    <main class="service-content">
-                        <div class="content-card">
-                            <h2 class="service-title">Overview</h2>
-                            <p class="service-desc">
-                                At PRIM & Associates, we provide the strategic insight and data-driven analysis needed to execute successful business transactions. From due diligence to post-deal integration, we guide you through every phase of a merger, acquisition, or divestiture, ensuring you maximize value and minimize risk.
+<div class="wp-site-blocks">
+<div class="guten-XMKGXO entry-content is-layout-constrained guten-post-content guten-element">
+<div class="section-wrapper" data-id="2VyYGc">
+<section class="wp-block-gutenverse-section guten-element guten-section guten-2VyYGc layout-fullwidth align-stretch prim-glass-nav" style="position: sticky; top: 0; z-index: 9999;">
+<div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-4WRTsx">
+<div class="guten-column-wrapper" data-id="4WRTsx">
+<div class="wp-block-gutenverse-image guten-element guten-image guten-Y7ASQF"><a class="guten-image-wrapper" href="index.html"><img alt="PRIM &amp; Associates Logo" class="gutenverse-image-box-filled" decoding="async" height="85" loading="lazy" src="images/Prim_Blue.png" width="350"/></a></div>
+</div>
+</div>
+<div class="wp-block-gutenverse-column guten-element guten-column guten-zLIHWA">
+<div class="guten-column-wrapper" data-id="zLIHWA">
+<div class="guten-element guten-nav-menu nav-menu break-point-tablet submenu-click-title" data-close-on-click="1" data-item-indicator="fas fa-chevron-down" id="guten-RgkjUx">
+<div class="gutenverse-hamburger-wrapper">
+<button aria-label="Open Menu" class="gutenverse-hamburger-menu">
+<i aria-hidden="true" class="fas fa-bars"></i>
+</button>
+</div>
+<div class="guten-nav-overlay"></div>
+<div class="gutenverse-menu-wrapper">
+<div class="gutenverse-menu-container">
+<ul class="gutenverse-menu" id="menu-acctop-1">
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-60" id="menu-item-60">
+<a aria-current="page" href="index.html">Home</a>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61" id="menu-item-61">
+<a href="about.html">About</a>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62" id="menu-item-62">
+<a href="services.html">Services</a>
+<ul class="sub-menu mega-menu">
+<li class="mega-column">
+<span class="mega-title">Core Accounting &amp; Tax</span>
+<ul>
+<li><a href="audit-assurance.html">Audit &amp; Assurance</a></li>
+<li><a href="tax-regulatory.html">Tax &amp; Regulatory</a></li>
+<li><a href="accounting-outsourcing.html">Accounting Outsourcing</a></li>
+<li><a href="wealth-management.html">Wealth Management</a></li>
+</ul>
+</li>
+<li class="mega-column">
+<span class="mega-title">Corporate &amp; Deal Advisory</span>
+<ul>
+<li><a href="corporate-law.html">Corporate Law Services</a></li>
+<li><a href="corporate-finance.html">Corporate Finance</a></li>
+<li><a href="outsourced-cfo.html">Outsourced CFO Services</a></li>
+<li><a href="deal-advisory.html">Deal Advisory</a></li>
+</ul>
+</li>
+<li class="mega-column">
+<span class="mega-title">Specialized Finance</span>
+<ul>
+<li><a href="sme-ipo.html">SME IPO Advisory</a></li>
+<li><a href="sports-finance.html">Sports Finance</a></li>
+<li><a href="government-advisory.html">Government Advisory</a></li>
+<li><a href="private-equity.html">Private Equity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68" id="menu-item-68">
+<a href="team.html">Team</a>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70" id="menu-item-70">
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71" id="menu-item-71">
+<a href="contact.html">Contact Us</a>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72" id="menu-item-72">
+<a href="blog.html">Blog</a>
+</li>
+</ul>
+</div>
+<div>
+<div class="gutenverse-nav-identity-panel">
+<div class="gutenverse-nav-site-title">
+<a class="gutenverse-nav-logo" href="index.html"><img alt="PRIM &amp; Associates - Accounting Firm &amp; Company (FSE) WordPress Theme" decoding="async" src="images/Prim_Blue.png"/></a>
+</div>
+<button aria-label="Close Menu" class="gutenverse-close-menu"><i aria-hidden="true" class="fas fa-times"></i></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="wp-block-gutenverse-column guten-element guten-column guten-YgaGOg hide-tablet hide-mobile">
+<div class="guten-column-wrapper" data-id="YgaGOg">
+<div class="guten-element guten-button-wrapper guten-b01p9O"><a class="guten-button guten-button-sm" href="appointment.html"><i class="fa-lg fas fa-phone"></i><span>Book A Call</span></a></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Page Header -->
+<div class="section-wrapper" style="background: #135989; padding: 120px 20px 80px; color: white; text-align: center;">
+<h1 style="font-size: 42px; font-weight: 800; color: #ffffff;">Deal Advisory</h1>
+<p style="opacity: 0.8; font-size: 18px;">Expert guidance for your most critical business transactions.</p>
+</div>
+<div class="service-page-wrapper">
+<div class="service-container">
+<aside class="service-sidebar">
+<div class="sidebar-widget">
+<h4 class="sidebar-title">Our Services</h4>
+<div class="sidebar-category">
+<div class="sidebar-cat-title">Accounting &amp; Tax</div>
+<ul class="service-list">
+<li><a href="audit-assurance.html">Audit &amp; Assurance</a></li>
+<li><a href="tax-regulatory.html">Tax &amp; Regulatory</a></li>
+<li><a href="accounting-outsourcing.html">Accounting Outsourcing</a></li>
+<li><a href="wealth-management.html">Wealth Management</a></li>
+</ul>
+</div>
+<div class="sidebar-category">
+<div class="sidebar-cat-title">Corporate &amp; Advisory</div>
+<ul class="service-list">
+<li><a href="corporate-law.html">Corporate Law Services</a></li>
+<li><a href="corporate-finance.html">Corporate Finance</a></li>
+<li><a href="outsourced-cfo.html">Outsourced CFO Services</a></li>
+<li><a class="active" href="deal-advisory.html">Deal Advisory</a></li>
+</ul>
+</div>
+<div class="sidebar-category">
+<div class="sidebar-cat-title">Specialized Finance</div>
+<ul class="service-list">
+<li><a href="sme-ipo.html">SME IPO Advisory</a></li>
+<li><a href="sports-finance.html">Sports Finance</a></li>
+<li><a href="government-advisory.html">Government Advisory</a></li>
+<li><a href="private-equity.html">Private Equity</a></li>
+</ul>
+</div>
+</div>
+<div class="sidebar-widget cta-box">
+<h3>Closing the Deal</h3>
+<p>Consult with our advisors for strategic merger and acquisition support.</p>
+<a class="cta-btn" href="contact.html">Start Discussion</a>
+</div>
+</aside>
+<main class="service-content">
+<div class="content-card">
+<h2 class="service-title">Overview</h2>
+<p class="service-desc">
+                                At PRIM &amp; Associates, we provide the strategic insight and data-driven analysis needed to execute successful business transactions. From due diligence to post-deal integration, we guide you through every phase of a merger, acquisition, or divestiture, ensuring you maximize value and minimize risk.
                             </p>
-                            <div class="feature-box">
-                                <h3 class="feature-title">Our Capabilities</h3>
-                                <div class="feature-list">
-                                    <div class="feature-item">
-                                        <div class="feature-icon">✓</div>
-                                        <div>
-                                            <strong>Mergers & Acquisitions (M&A)</strong>
-                                            <p>Strategic support for buying or selling businesses, from valuation to closing.</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature-item">
-                                        <div class="feature-icon">✓</div>
-                                        <div>
-                                            <strong>Due Diligence</strong>
-                                            <p>Thorough financial and operational reviews to uncover risks and opportunities.</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature-item">
-                                        <div class="feature-icon">✓</div>
-                                        <div>
-                                            <strong>Transaction Structuring</strong>
-                                            <p>Developing financial structures that align with your long-term business goals.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
-                </div>
-            </div>
-
-			
-		</div>
-	</div>
-    <script src="wp-content/plugins/gutenverse/assets/js/frontend/nav-menu.js"></script>
-    <script>
+<div class="feature-box">
+<h3 class="feature-title">Our Capabilities</h3>
+<div class="feature-list">
+<div class="feature-item">
+<div class="feature-icon">✓</div>
+<div>
+<strong>Mergers &amp; Acquisitions (M&amp;A)</strong>
+<p>Strategic support for buying or selling businesses, from valuation to closing.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon">✓</div>
+<div>
+<strong>Due Diligence</strong>
+<p>Thorough financial and operational reviews to uncover risks and opportunities.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon">✓</div>
+<div>
+<strong>Transaction Structuring</strong>
+<p>Developing financial structures that align with your long-term business goals.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+<script>
         // Smooth responsive menu behavior
         document.addEventListener('DOMContentLoaded', function() {
             var hamburger = document.querySelector('.gutenverse-hamburger-menu');
@@ -358,54 +216,56 @@
             }
         });
     </script>
-
-
-			<div class="section-wrapper" data-id="footer-main" style="background-color: #041520 !important; width: 100% !important; display: block !important; clear: both !important; margin-top: 100px;">
-				<footer class="wp-block-gutenverse-section guten-element guten-section layout-boxed align-stretch" style="background-color: #041520 !important; color: #ffffff !important; padding: 160px 0 40px; border-top: 5px solid #135989;">
-					<div class="guten-container" style="display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; padding: 0 20px; background: transparent !important;">
-						<div class="footer-col" style="flex: 1; min-width: 200px;">
-							<h6 style="color: #2a76ad !important; font-size: 18px; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Support</h6>
-							<ul style="list-style: none; padding: 0; margin: 0;">
-								<li style="margin-bottom: 12px;"><a href="contact.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Contact Us</a></li>
-								<li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Privacy & Policy</a></li>
-								<li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Terms & Conditions</a></li>
-							</ul>
-						</div>
-						<div class="footer-col" style="flex: 2; min-width: 300px;">
-							<div style="margin-bottom: 25px;">
-								<img src="images/Prim_Blue.png" alt="PRIM Logo" style="height: 60px; filter: brightness(0) invert(1);">
-							</div>
-							<p style="color: rgba(255,255,255,0.8) !important; line-height: 1.8; margin-bottom: 20px;">Your Trusted Partner in Financial Excellence. Empowering businesses through strategic audits and expert tax solutions.</p>
-							<div style="color: rgba(255,255,255,0.7) !important; font-size: 14px; line-height: 1.6;">
-								<p style="margin-bottom: 10px; color: white !important;"><strong>Office Address:</strong> Orris Tower, Opp. Hilite Mall, Palazhi Junction, Kozhikode-673014, Kerala</p>
-								<p style="margin-bottom: 10px; color: white !important;"><strong>Phone:</strong> 9656757373</p>
-								<p style="color: white !important;"><strong>Email:</strong> primcaclt@gmail.com</p>
-							</div>
-						</div>
-						<div class="footer-col" style="flex: 1; min-width: 150px;">
-							<h6 style="color: #2a76ad !important; font-size: 18px; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Quick Links</h6>
-							<ul style="list-style: none; padding: 0; margin: 0;">
-								<li style="margin-bottom: 12px;"><a href="index.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Home</a></li>
-								<li style="margin-bottom: 12px;"><a href="about.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">About Us</a></li>
-								<li style="margin-bottom: 12px;"><a href="appointment.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Appointment</a></li>
-							</ul>
-						</div>
-						<div class="footer-col" style="flex: 1.5; min-width: 200px;">
-							<h6 style="color: #2a76ad !important; font-size: 18px; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Services</h6>
-							<ul style="list-style: none; padding: 0; margin: 0;">
-								<li style="margin-bottom: 12px;"><a href="audit-assurance.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Audit & Assurance</a></li>
-								<li style="margin-bottom: 12px;"><a href="tax-regulatory.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Tax & Regulatory</a></li>
-								<li style="margin-bottom: 12px;"><a href="corporate-law.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Corporate Law</a></li>
-								<li style="margin-bottom: 12px;"><a href="accounting-outsourcing.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Accounting Outsourcing</a></li>
-								<li style="margin-bottom: 12px;"><a href="outsourced-cfo.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Outsourced CFO</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="guten-container" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; background: transparent !important;">
-						<p style="color: rgba(255,255,255,0.5) !important; font-size: 14px;">Copyright © PRIM & Associates 2026. All rights reserved.</p>
-					</div>
-				</footer>
-			</div>
-
+<div class="section-wrapper" data-id="footer-main" style="background-color: #041520 !important; width: 100% !important; display: block !important; clear: both !important; margin-top: 100px;">
+<footer class="wp-block-gutenverse-section guten-element guten-section layout-boxed align-stretch" style="background-color: #041520 !important; color: #ffffff !important; padding: 160px 0 40px; border-top: 5px solid #135989;">
+<div class="guten-container" style="display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; padding: 0 20px; background: transparent !important;">
+<div class="footer-col" style="flex: 1; min-width: 200px;">
+<h6 style="color: #2a76ad !important; font-size: 18px; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Support</h6>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 12px;"><a href="contact.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Contact Us</a></li>
+<li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Privacy &amp; Policy</a></li>
+<li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<div class="footer-col" style="flex: 2; min-width: 300px;">
+<div style="margin-bottom: 25px;">
+<img alt="PRIM Logo" src="images/Prim_Blue.png" style="height: 60px; filter: brightness(0) invert(1);"/>
+</div>
+<p style="color: rgba(255,255,255,0.8) !important; line-height: 1.8; margin-bottom: 20px;">Your Trusted Partner in Financial Excellence. Empowering businesses through strategic audits and expert tax solutions.</p>
+<div style="color: rgba(255,255,255,0.7) !important; font-size: 14px; line-height: 1.6;">
+<p style="margin-bottom: 10px; color: white !important;"><strong>Office Address:</strong> Orris Tower, Opp. Hilite Mall, Palazhi Junction, Kozhikode-673014, Kerala</p>
+<p style="margin-bottom: 10px; color: white !important;"><strong>Phone:</strong> 9656757373</p>
+<p style="color: white !important;"><strong>Email:</strong> primcaclt@gmail.com</p>
+</div>
+</div>
+<div class="footer-col" style="flex: 1; min-width: 150px;">
+<h6 style="color: #2a76ad !important; font-size: 18px; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Quick Links</h6>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 12px;"><a href="index.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Home</a></li>
+<li style="margin-bottom: 12px;"><a href="about.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">About Us</a></li>
+<li style="margin-bottom: 12px;"><a href="appointment.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Appointment</a></li>
+</ul>
+</div>
+<div class="footer-col" style="flex: 1.5; min-width: 200px;">
+<h6 style="color: #2a76ad !important; font-size: 18px; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Services</h6>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 12px;"><a href="audit-assurance.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Audit &amp; Assurance</a></li>
+<li style="margin-bottom: 12px;"><a href="tax-regulatory.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Tax &amp; Regulatory</a></li>
+<li style="margin-bottom: 12px;"><a href="corporate-law.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Corporate Law</a></li>
+<li style="margin-bottom: 12px;"><a href="accounting-outsourcing.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Accounting Outsourcing</a></li>
+<li style="margin-bottom: 12px;"><a href="outsourced-cfo.html" style="color: rgba(255,255,255,0.8) !important; text-decoration: none !important; transition: color 0.3s;">Outsourced CFO</a></li>
+</ul>
+</div>
+</div>
+<div class="guten-container" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; background: transparent !important;">
+<p style="color: rgba(255,255,255,0.5) !important; font-size: 14px;">Copyright © PRIM &amp; Associates 2026. All rights reserved.</p>
+</div>
+</footer>
+</div>
+<script src="js/nav-menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/nav-menu.js"></script>
+<script src="js/prim-animations.js"></script>
 </body>
 </html>
