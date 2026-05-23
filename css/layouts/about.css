@@ -2084,7 +2084,7 @@ h3.guten-element.guten-D4fz48,
 h4.guten-element.guten-D4fz48,
 h5.guten-element.guten-D4fz48,
 h6.guten-element.guten-D4fz48 {
-    color: var(--wp--preset--color--dark-heading);
+    color: var(--wp--preset--color--heading);
     font-family: var(--gutenverse-font-family-h2);
     font-size: var(--gutenverse-font-size-h2);
     font-weight: var(--gutenverse-font-weight-h2);
@@ -2134,7 +2134,7 @@ h6.guten-element.guten-D4fz48 {
 
 .guten-XP9iJ7 {
     columns: 1;
-    color: var(--wp--preset--color--dark-text);
+    color: var(--wp--preset--color--text);
     font-family: var(--gutenverse-font-family-text);
     font-size: var(--gutenverse-font-size-text);
     font-weight: var(--gutenverse-font-weight-text);
@@ -2154,7 +2154,7 @@ h6.guten-element.guten-D4fz48 {
 
 .guten-KvkZib {
     columns: 1;
-    color: var(--wp--preset--color--dark-text);
+    color: var(--wp--preset--color--text);
     font-family: var(--gutenverse-font-family-text);
     font-size: var(--gutenverse-font-size-text);
     font-weight: var(--gutenverse-font-weight-text);
