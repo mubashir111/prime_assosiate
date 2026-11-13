@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Design tokens — the single source of truth for colour, type and spacing.
+   ========================================================================== */
+
+:root {
+  /* Colour */
+  --color-primary: #135989;
+  --color-primary-rgb: 19 89 137;
+  --color-primary-dark: #0b3d60;
+  --color-primary-light: #2a76ad;
+  --color-ink: #2d3e50;
+  --color-muted: #6e7175;
+  --color-bg: #f8f6f2;
+  --color-surface: #ffffff;
+  --color-surface-soft: #fafafa;
+  --color-field: #f4f7f9;
+  --color-dark: #0e1e28;
+  --color-footer: #041520;
+  --color-success: #4daa57;
+  --color-success-soft: #e0eee3;
+  --color-star: #ffc107;
+  --color-line: rgb(var(--color-primary-rgb) / 0.1);
+
+  /* Typography */
+  --font-heading: "DM Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Layout */
+  --container: 1200px;
+  --gutter: 24px;
+  --header-height: 79px;
+  --header-pad: clamp(16px, 5.28vw, 76px);
+
+  /* Vertical rhythm — every gap on the site comes from this scale.
+     Values shrink fluidly from desktop (1440px) to mobile. */
+  --space-section: clamp(64px, 8.9vw, 128px); /* between page sections        */
+  --space-hero: clamp(48px, 8.3vw, 120px);    /* header -> first headline      */
+  --space-intro: clamp(40px, 4.4vw, 64px);    /* page intro -> its content     */
+  --space-head: clamp(32px, 3.3vw, 48px);     /* section heading -> content    */
+  --space-actions: 40px;                      /* copy -> buttons               */
+  --space-stack: 24px;                        /* related blocks (cards, tiles) */
+
+  /* Shape & elevation */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+  --shadow-card: 0 4px 20px rgb(0 0 0 / 0.1);
+  --shadow-soft: 0 4px 20px rgb(var(--color-primary-rgb) / 0.08);
+  --shadow-float: 0 10px 30px rgb(0 0 0 / 0.05);
+  --shadow-button: 0 6px 18px rgb(var(--color-primary-rgb) / 0.12);
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 16px;
+  }
+}

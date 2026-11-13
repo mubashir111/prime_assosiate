@@ -1,0 +1,199 @@
+/* ==========================================================================
+   Motion — styles that support js/story.js (GSAP).
+   Nothing here hides content unless <html> has .motion, which is only set
+   when the visitor allows motion; a 3s failsafe removes it if GSAP never boots.
+   ========================================================================== */
+
+/* Hold first-screen content for the few ms before GSAP sets start states. */
+.motion:not(.story-ready) :where(.hero, .page-hero, .service-banner, .booking, .contact-hero, .detail--article) {
+  visibility: hidden;
+}
+
+/* While GSAP is moving an element, CSS transitions must not fight it. */
+.story-anim {
+  transition: none !important;
+}
+
+/* Bars are driven by GSAP in story mode. */
+.story .meter__fill {
+  transition: none;
+}
+
+/* ---- Header: frosted glass once the page scrolls ------------------------ */
+
+.site-header {
+  transition: background-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.site-header.is-scrolled {
+  background: rgb(248 246 242 / 0.82);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+  box-shadow: 0 1px 0 var(--color-line), 0 12px 32px -18px rgb(11 61 96 / 0.35);
+}
+
+/* ---- Reading progress --------------------------------------------------- */
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 101;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  pointer-events: none;
+}
+
+/* ---- Timeline steps: line draws, markers light up ----------------------- */
+
+.step:not(:last-child)::after {
+  transform: scaleY(var(--line-progress, 1));
+  transform-origin: 50% 0;
+}
+
+.step__marker {
+  transition: background-color 0.5s var(--ease), color 0.5s var(--ease), border-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+.step.is-active .step__marker {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 0 0 6px rgb(var(--color-primary-rgb) / 0.1);
+}
+
+/* ---- Comparison payoff --------------------------------------------------- */
+
+.compare__label {
+  transition: color 0.4s var(--ease), font-weight 0.4s;
+}
+
+.compare.is-winner .compare__label {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ---- CTA attention ring (plays once) ------------------------------------ */
+
+.cta .btn {
+  position: relative;
+}
+
+.cta .btn::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid rgb(var(--color-primary-rgb) / 0.5);
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cta .btn.is-ringing::after {
+  animation: cta-ring 1.6s var(--ease) 2;
+}
+
+@keyframes cta-ring {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}
+
+/* ==========================================================================
+   Cinematic chapters (desktop, created by js/story.js)
+   ========================================================================== */
+
+/* A pinned chapter fills the viewport and centres its content below the header. */
+.chapter-pin {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-block: var(--header-height) 0;
+  overflow: hidden;
+}
+
+.chapter-pin > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* The frame hands its photo to the full-bleed stage behind it. */
+.chapter-pin .why__panel,
+.chapter-pin .media--process,
+.chapter-pin .video {
+  background: none !important;
+}
+
+.zoom-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  will-change: clip-path;
+}
+
+.zoom-stage__img {
+  position: absolute;
+  inset: 0;
+  background: center / cover no-repeat;
+  will-change: transform;
+}
+
+/* Darkens the photo once it is full-bleed so the caption reads. */
+.zoom-stage__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(4 21 32 / 0.82) 0%, rgb(4 21 32 / 0.45) 50%, rgb(4 21 32 / 0.1) 100%);
+  opacity: 0;
+}
+
+.zoom-stage__caption {
+  position: absolute;
+  top: 50%;
+  left: max(var(--gutter), calc((100% - var(--container)) / 2));
+  max-width: 560px;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(40px, 4.6vw, 68px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-wrap: balance;
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+/* Image layer used for zooming photos inside their own frames. */
+.zoom-host {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image: none !important;
+}
+
+.zoom-layer {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: center / cover no-repeat;
+  will-change: transform;
+}
+
+/* Scroll-scrubbed elements must not also run CSS transitions. */
+.post-card__thumb img {
+  will-change: transform;
+}
+
+.story .post-card__thumb img {
+  transition: none;
+}

@@ -1,149 +1,179 @@
-/* 
-   PRIM & Associates - Base Browser Reset & Global Animations
-*/
+/* ==========================================================================
+   Base — reset, element defaults and layout primitives.
+   ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-/* Reset and Core Body */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: var(--prim-font-body) !important;
-    background-color: var(--prim-bg-cream) !important;
-    color: var(--prim-dark-slate) !important;
-    overflow-x: hidden !important;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-ink);
+  background: var(--color-bg);
+  overflow-x: hidden;
 }
 
-/* Image Reset */
 img {
-    max-width: 100% !important;
-    height: auto !important;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Typography elements */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--prim-dark-slate) !important;
-    font-family: var(--prim-font-heading) !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.01em !important;
-}
-
-/* Transitions */
 a {
-    transition: var(--prim-transition) !important;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Custom Highlight Consistency */
-.guten-text-highlight {
-    background-image: linear-gradient(to right, var(--prim-accent-gold) 0%, var(--prim-accent-gold) 100%) !important;
-    background-size: 100% 8px !important;
-    background-repeat: no-repeat !important;
-    background-position: 0 95% !important;
-    text-decoration: none !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-ink);
+  text-wrap: balance;
 }
 
-/* Global Utilities */
-.prim-accent {
-    color: var(--prim-accent-gold) !important;
+p {
+  margin: 0;
+  text-wrap: pretty;
 }
 
-.animated {
-    animation-duration: 1s !important;
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-/* Core Animations */
-@keyframes primSafeFadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+figure,
+blockquote {
+  margin: 0;
 }
 
-@keyframes primFadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
 }
 
-@keyframes primScaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+:focus-visible {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: 3px;
 }
 
-@keyframes primSlowZoom {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.12);
-    }
+/* ---- Layout primitives -------------------------------------------------- */
+
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
 }
 
-@keyframes prim-shine-effect {
-    0% {
-        transform: translateX(-150%) skewX(-25deg);
-    }
-    15%, 100% {
-        transform: translateX(200%) skewX(-25deg);
-    }
+.section {
+  padding-block: 100px;
 }
 
-/* Scroll Entrance Triggers */
-.prim-fade-elem {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: opacity, transform;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
-.prim-fade-elem.prim-in-view {
-    opacity: 1;
-    transform: translateY(0);
+/* ---- Vertical rhythm ----------------------------------------------------
+   Sections own no vertical padding; spacing is applied between them.
+   :where() keeps specificity at zero so components can opt out. */
+
+:where(main > *) {
+  padding-top: var(--space-section);
 }
 
-.prim-animate-shine {
-    position: relative;
-    overflow: hidden;
+:where(main > :first-child) {
+  padding-top: var(--space-hero);
 }
 
-.prim-animate-shine::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
-    transform: translateX(-150%) skewX(-25deg);
-    animation: prim-shine-effect 4s infinite linear;
-    pointer-events: none;
-    z-index: 10;
+:where(main > .page-hero + *) {
+  padding-top: var(--space-intro);
 }
 
-/* Bulletproof CSS Entrance Animations */
-.guten-section h1,
-.guten-section h2,
-.guten-section h3,
-.guten-section h4,
-.guten-section p,
-.guten-section .guten-button,
-.guten-section a:not(.guten-image-wrapper),
-.prim-glass-card,
-.guten-icon-box-wrapper {
-    animation: primSafeFadeInUp 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+/* A section with its own background splits the gap inside and outside it. */
+.section--tinted {
+  margin-top: calc(var(--space-section) / 2);
+  padding-block: calc(var(--space-section) / 2);
+}
+
+.section--tinted + * {
+  padding-top: calc(var(--space-section) / 2);
+}
+
+/* ---- Headings ----------------------------------------------------------- */
+
+.title-xl {
+  font-size: 64px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+}
+
+.title-lg {
+  font-size: 56px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+}
+
+.title-lg--ink {
+  color: var(--color-ink);
+}
+
+/* Hand-drawn style underline used on key words in headings. */
+.highlight {
+  background-image: linear-gradient(var(--color-primary), var(--color-primary));
+  background-repeat: no-repeat;
+  background-size: 100% 8px;
+  background-position: 0 95%;
+}
+
+.lead {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+@media (max-width: 1024px) {
+  .title-xl {
+    font-size: 48px;
+  }
+  .title-lg {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title-xl {
+    font-size: 40px;
+  }
+  .title-lg {
+    font-size: 34px;
+  }
+  .section {
+    padding-block: 64px;
+  }
 }
